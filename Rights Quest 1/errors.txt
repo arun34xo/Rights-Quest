@@ -1,0 +1,10 @@
+﻿I'm sorry, but errors were detected in your script. Please correct the
+errors listed below, and try again.
+
+
+File "game/script/4_games/mini1/mini1.rpy", line 24: expected 'simple_expression' not found.
+    pause
+         ^
+
+Ren'Py Version: Ren'Py 8.2.0.24012702
+Thu Apr  4 11:02:02 2024
