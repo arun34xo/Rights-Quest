@@ -11,7 +11,7 @@ label Unicorn:
         "Let's be off!!":
             unicorn "Such an active child, I already like you"
         "Let's take our time...":
-            unicorn "Up up and away, an adventure does not wait for us"
+            unicorn "Up up and away, an adventure does not wait for one"
 
     hide unicorn with dissolve
     scene somewhere with fade

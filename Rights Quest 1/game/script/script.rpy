@@ -15,11 +15,11 @@ define gran = Character("Granny",alpha=1.0)
 define sis = Character("Eileen",alpha=1.0)
 define bro = Character("Keith",alpha=1.0)
 define user = Character("Me")
-define bear = Character("Guardian Bear")
-define owl = Character("Guardian Owl")
-define unicorn = Character("Guardian Unicorn")
+define santa = Character("Santa",alpha=1.0)
 
 label start:
+
+    #jump pro2
 
     scene bg dev
     show dev with moveinright

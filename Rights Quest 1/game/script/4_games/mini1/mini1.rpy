@@ -9,7 +9,7 @@ label mini1:
     $ GameAsBG()
     with dissolve
 
-    user "Lets find a clue"
+    user "Lets find a 'RED' object"
 
     # launch the game and play
     $ res = StartGame()
@@ -23,9 +23,9 @@ label mini1:
         scene black with dissolve:
             pause(1.0)
         scene HintOg with dissolve
-        user "Such a peculiar drawing"
+        user "Hmm, this is unusual"
         scene blank
-        jump foundhiddenitem
+        jump redbag
     else:
-        "{i}Hint : Search on the Walls of the ruins{/i}"
+        "{i}Hint : Search behind the trees{/i}"
         jump mini1

@@ -73,22 +73,37 @@ label pro1:
         alpha 0.5 #transparency
     gran "Once upon a time, there lived 3 young children."
     scene bg_town with dissolve #with 3kids
-    "Although they were young, they were mature at heart"
-    "One day, they heard of a village folktale about the magical jewels and that getting all 3 of them would grant them one wish"
+    gran "Although they were young, they were mature at heart"
+    gran "On a snowy day, as Christmas draws near the children venture to a nearby forest to (what?)"
 
     scene bg_town2 with fade #wo 3kids
     show bro at right with moveinright
-    bro "We have to venture into the magical forest and find the crystals"
+    bro "Let's not be too late and get back"
 
     show sis at left with moveinleft
-    sis "Lets go on an adventure!!"
+    sis "Hey, I spot with my eyes something red"
+
+    bro "Where?"
+
+    jump mini1
+
+    label redbag:
+        pass
+    
+    show bro at right with moveinright
+    bro "Hmmm, it's not something you would find lying around in a forest..."
+
+    show sis at left with moveinleft
+    sis "There's a tag that says to return to user"
+
+    bro "What do we do?"
 
     label d1:
         menu:
-            "Let's goo!!":
+            "Let's return it":
                 pass
-            "Maybe another time...":
-                bro "Come on, theres not much to do today anyways"
+            "Do nothing...":
+                sis "Let's return it to the owner, the person who lost it may be worried..."
                 jump d1
 
     jump pro2

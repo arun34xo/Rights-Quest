@@ -104,13 +104,7 @@ screen game:
                 focus_mask True
                 pos(oXY[i])
                 idle oN[i]
-                hover oN[i]
-                # you can duplicate pictures of objects,
-                 # calling them "images/itemname_hover.png"
-                 # and highlight them in a graphics editor
-                 # and replace the line above with the line below
-                 # then when you hover the cursor, they will be highlighted
-                # hover oN[i] + " hover"
+                hover oN[i] + " hover"
                 if oActive:
                     action [oClick(i), Return()]
                 else:

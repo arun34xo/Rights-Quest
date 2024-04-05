@@ -1,16 +1,144 @@
-default la = False
+default shouted = False
 default nothingcount = 0
 label pro2:
 
-    scene bg_forrest
-    "As the merry band walks through the forest they come across a ruin"
-
-    scene ruin3pillars
+    scene santa_field
+    "As they go to the address in the tag, they reach a field filled with Reindeers and in the middle a house with smoke coming out of the chiminey is spoted"
 
     show bro at right with moveinright
-    bro "What do we do? We've reached the place the villagers were talking about..."
+    bro "Is this the right location?"
 
-    label choice1:
+    show sis at left with moveinleft
+    sis "It must be, it's magical"
+
+    scene santa_house
+    bro "Shall we Knock?"
+
+    "What do you do?"
+    menu:
+        "Knock at the door":
+            hide bro
+            hide sis
+            with dissolve
+            show santa_shadow
+            santa "Who is it at this time of the day?"
+            pass
+        "Scream":
+            user "IS ANYONE IN THERE??"
+            sis "Noo... Why are you shouting?"
+            hide bro
+            hide sis
+            with dissolve
+            show santa_shadow
+            santa "Who is so rude enough to disturb a man and his reindeers like this?"
+            $ shouted = True
+            pass
+        "Simply wait outside":
+            bro "We'll be here for a while then..."
+            sis "I'll just knock then..."
+            hide bro
+            hide sis
+            with dissolve
+            show santa_shadow
+            santa "Who is it at this time of the day?"
+            pass        
+
+    show bro at right with moveinright
+    bro "We found your bag lying around in the forest"
+
+    show sis at left with moveinleft
+    sis "We thought we might as well as return it to the owner"
+
+    "As the door opens, a large figure steps out with a pleasant smile"
+
+    show santa at right with moveinright
+    sis "Oh my god it's Santa!!"
+    santa "Oh my!! What a merry surprise. I was puzzled on what I should do since I lost the bag"
+    santa "Come in children, Welcome to my humble abode"
+
+    scene santa_workshop with fade
+
+    show santa at right with moveinright
+    santa "I lost my bag as I was travelling back, Thank you young ones for finding the bag. You may have very well saved Christmas this year"
+    
+    show sis at left with moveinleft
+    sis "Really? It's an honour Mr. Santa Clause"
+    hide sis with dissolve
+
+    show bro at left with moveinleft
+    bro "We only did what had to be done"
+    hide bro with dissolve
+
+    santa "If you children would like to help, I have a few missing presents around the area"
+
+    "What would you like to do?"
+    menu:
+        "Accept the request":
+            user "Of course, we don't mind helping someone at all"
+            santa "Such a kind child, Very well!"
+            pass
+
+        "Ask for the reward":
+            user "Do we get a reward?"
+            santa "Such an eager child. Yes, I've prepared a series of challenges for you to overcome. Reward itself shall remain a surprise."
+            pass
+
+        "Stay silent":
+            hide santa with dissolve
+
+            show bro at right with moveinright
+            bro "If there are presents missing, then there will be someone without presents this Christmas"
+
+            show sis at left with moveinleft
+            sis "I don't want people to be present-less this Christmas. Can we please help Mr.Santa?"
+
+            menu:
+                "Ok, Let's Help":
+                    sis "Yayyy Thank You!!"
+                    bro "Let's do this then!"
+                    pass
+
+    hide bro
+    hide sis
+    with dissolve
+    show santa at right with moveinright
+    santa "I thank you again young ones, I've got a map with the locations of the presents I lost."
+    santa "I kept it somewhere here... Where did i keep it now?"
+    jump mini2
+
+    label foundhiddenitem:
+        pass
+
+    show santa at right with moveinright
+    santa "Haa!! There it is, Well done in finding it."
+    scene bg_map with fade
+    santa "Yes, the presents that I've lost must be located in these 3 areas"
+    scene santa_workshop with fade
+    santa "I wish you the best of lucks on your adventure"
+
+    show bro at right with moveinright
+    bro "Very well, blah blah"
+    show sis at left with moveinleft
+    sis "blah blah"
+
+    jump pro3
+
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+#######################################################################################################################################
+'''    label choice1:
         menu:
             "Stand at each of the 3 pillars separately" if la==True:
                 jump stand3pill
@@ -60,3 +188,4 @@ label pro2:
             sis "There must be something we can do with the clue..."
             $ nothingcount=2
         jump choice1
+'''

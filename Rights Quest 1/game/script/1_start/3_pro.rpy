@@ -1,11 +1,34 @@
 default completed=False
-default bearcomplete=False
-default owlcomplete=False
-default unicorncomplete=False
+default L1complete=False
+default L2complete=False
+default L3complete=False
 default c=0
 default firsttime=True
 
 label pro3:
+    return
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#######################################################################################################################################
+'''
     #hide all
     scene ruin3pillars
     "As the children stand next to the 3 pillars, the ground shakes and there appears 3 magical beast"
@@ -79,3 +102,4 @@ label pro3:
                     jump choice2
             "Go to Temple" if completed == True:
                 jump temple
+'''
