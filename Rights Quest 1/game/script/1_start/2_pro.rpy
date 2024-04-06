@@ -20,7 +20,7 @@ label pro2:
             hide bro
             hide sis
             with dissolve
-            show santa_shadow
+            show santa_shadow at right with moveinright
             santa "Who is it at this time of the day?"
             pass
         "Scream":
@@ -29,7 +29,7 @@ label pro2:
             hide bro
             hide sis
             with dissolve
-            show santa_shadow
+            show santa_shadow at right with moveinright
             santa "Who is so rude enough to disturb a man and his reindeers like this?"
             $ shouted = True
             pass
@@ -39,18 +39,20 @@ label pro2:
             hide bro
             hide sis
             with dissolve
-            show santa_shadow
+            show santa_shadow at right with moveinright
             santa "Who is it at this time of the day?"
             pass        
 
-    show bro at right with moveinright
+    show bro at left with moveinleft
     bro "We found your bag lying around in the forest"
 
+    hide bro with dissolve
     show sis at left with moveinleft
     sis "We thought we might as well as return it to the owner"
 
     "As the door opens, a large figure steps out with a pleasant smile"
 
+    hide santa_shadow with dissolve
     show santa at right with moveinright
     sis "Oh my god it's Santa!!"
     santa "Oh my!! What a merry surprise. I was puzzled on what I should do since I lost the bag"
@@ -71,6 +73,9 @@ label pro2:
 
     santa "If you children would like to help, I have a few missing presents around the area"
 
+    label d2:
+        pass
+
     "What would you like to do?"
     menu:
         "Accept the request":
@@ -81,7 +86,7 @@ label pro2:
         "Ask for the reward":
             user "Do we get a reward?"
             santa "Such an eager child. Yes, I've prepared a series of challenges for you to overcome. Reward itself shall remain a surprise."
-            pass
+            jump d2
 
         "Stay silent":
             hide santa with dissolve
@@ -109,17 +114,13 @@ label pro2:
     label foundhiddenitem:
         pass
 
+    scene santa_workshop with dissolve
     show santa at right with moveinright
     santa "Haa!! There it is, Well done in finding it."
     scene bg_map with fade
     santa "Yes, the presents that I've lost must be located in these 3 areas"
     scene santa_workshop with fade
     santa "I wish you the best of lucks on your adventure"
-
-    show bro at right with moveinright
-    bro "Very well, blah blah"
-    show sis at left with moveinleft
-    sis "blah blah"
 
     jump pro3
 

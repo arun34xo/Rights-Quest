@@ -21,10 +21,10 @@ label pro1:
     pause(2.0)
     scene bg_living
 
-    show sis at right with moveinright
+    show sis main at right with moveinright
     sis "Wow, someone slept like a baby"
 
-    show bro at left with moveinleft
+    show bro main at left with moveinleft
     bro "Do you even remember who you are?"
 
     user "Yeah kind of..."
@@ -40,10 +40,10 @@ label pro1:
         $ name = name.lower()
 
         if name == "keith" :
-            "{i}(That's my brother's name...){/i}"
+            "{i}(That's my friends's name...){/i}"
             jump name_set
         elif name == "eileen" :
-            "{i}(That's my sister's name...){/i}"
+            "{i}(That's my friends's name...){/i}"
             jump name_set
         
         $ name = name.title()
@@ -57,14 +57,14 @@ label pro1:
                 jump name_set
     
     scene bg_living with dissolve
-    show bro at right with moveinright
+    show bro main at right with moveinright
     bro "The sleeping princess is finally awake"
     
     show granny at left with moveinleft
     gran "Lets not make fun of the young one, now shall we begin?"    
 
     hide bro
-    show sis at right with moveinright
+    show sis main at right with moveinright
     sis "Yes Granny lets begin!!"
     
     #hide all
@@ -72,11 +72,11 @@ label pro1:
     show granny at left with dissolve:
         alpha 0.5 #transparency
     gran "Once upon a time, there lived 3 young children."
-    scene bg_town with dissolve #with 3kids
+    scene bg_forestwkid with dissolve #with 3kids
     gran "Although they were young, they were mature at heart"
     gran "On a snowy day, as Christmas draws near the children venture to a nearby forest to (what?)"
 
-    scene bg_town2 with fade #wo 3kids
+    scene bg_forest with fade #wo 3kids
     show bro at right with moveinright
     bro "Let's not be too late and get back"
 
@@ -94,7 +94,7 @@ label pro1:
     bro "Hmmm, it's not something you would find lying around in a forest..."
 
     show sis at left with moveinleft
-    sis "There's a tag that says to return to user"
+    sis "There's a tag that says 'If found, please return to {i}address{/i}'"
 
     bro "What do we do?"
 

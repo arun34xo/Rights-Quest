@@ -1,4 +1,4 @@
-
+#done
 
 label mini2:
     scene 
@@ -22,7 +22,7 @@ label mini2:
     if oRes:
         scene black with dissolve:
             pause(1.0)
-        scene HintOg with dissolve
+        scene bg_map with dissolve
         user "I wonder if this is the map Mr. Santa is looking for..."
         scene blank
         jump foundhiddenitem
