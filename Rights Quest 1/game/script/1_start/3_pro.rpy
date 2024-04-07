@@ -3,16 +3,18 @@ default L1complete=False
 default L2complete=False
 default L3complete=False
 default c=0
-default firsttime=True
 
 label pro3:
-    show bro at right with moveinright
+
+    scene black with dissolve
+    show screen gameUI
+
+    show brochar at right with moveinright
     bro "Very well, blah blah"
 
-    show sis at left with moveinleft
+    show sischar at left with moveinleft
     sis "blah blah"
 
-    
     return
 
 

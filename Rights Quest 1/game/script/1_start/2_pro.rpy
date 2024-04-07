@@ -2,74 +2,79 @@ default shouted = False
 default nothingcount = 0
 label pro2:
 
-    scene santa_field
+    scene santa_field with fade
     "As they go to the address in the tag, they reach a field filled with Reindeers and in the middle a house with smoke coming out of the chiminey is spoted"
 
-    show bro at right with moveinright
+    show brochar at right with moveinright
     bro "Is this the right location?"
 
-    show sis at left with moveinleft
+    show sischar at left with moveinleft
     sis "It must be, it's magical"
 
-    scene santa_house
+    scene bg_santahouse
+    show brochar at right with moveinright
     bro "Shall we Knock?"
 
-    "What do you do?"
+    user "...."
     menu:
         "Knock at the door":
-            hide bro
-            hide sis
+            hide brochar
+            hide sischar
             with dissolve
-            show santa_shadow at right with moveinright
+            show santachar at right with moveinright:
+                alpha 0.2
             santa "Who is it at this time of the day?"
             pass
         "Scream":
             user "IS ANYONE IN THERE??"
             sis "Noo... Why are you shouting?"
-            hide bro
-            hide sis
+            hide brochar
+            hide sischar
             with dissolve
-            show santa_shadow at right with moveinright
+            show santachar at right with moveinright:
+                alpha 0.3
             santa "Who is so rude enough to disturb a man and his reindeers like this?"
             $ shouted = True
             pass
         "Simply wait outside":
             bro "We'll be here for a while then..."
+            show sischar at left with moveinleft
             sis "I'll just knock then..."
-            hide bro
-            hide sis
+            hide brochar
+            hide sischar
             with dissolve
-            show santa_shadow at right with moveinright
+            show santachar at right with moveinright:
+                alpha 0.1
             santa "Who is it at this time of the day?"
             pass        
 
-    show bro at left with moveinleft
+    show brochar at left with moveinleft
     bro "We found your bag lying around in the forest"
 
-    hide bro with dissolve
-    show sis at left with moveinleft
+    hide brochar with dissolve
+    show sischar at left with moveinleft
     sis "We thought we might as well as return it to the owner"
 
     "As the door opens, a large figure steps out with a pleasant smile"
 
-    hide santa_shadow with dissolve
-    show santa at right with moveinright
+    hide santachar with dissolve
+    show santachar at right with moveinright
     sis "Oh my god it's Santa!!"
     santa "Oh my!! What a merry surprise. I was puzzled on what I should do since I lost the bag"
     santa "Come in children, Welcome to my humble abode"
 
-    scene santa_workshop with fade
+    scene bg_santa_workshop1 with fade
 
-    show santa at right with moveinright
+    show santachar at right with moveinright
     santa "I lost my bag as I was travelling back, Thank you young ones for finding the bag. You may have very well saved Christmas this year"
     
-    show sis at left with moveinleft
+    show sischar at left with moveinleft
     sis "Really? It's an honour Mr. Santa Clause"
-    hide sis with dissolve
+    hide sischar with dissolve
 
-    show bro at left with moveinleft
+    show brochar at left with moveinleft
     bro "We only did what had to be done"
-    hide bro with dissolve
+    hide brochar with dissolve
 
     santa "If you children would like to help, I have a few missing presents around the area"
 
@@ -89,12 +94,12 @@ label pro2:
             jump d2
 
         "Stay silent":
-            hide santa with dissolve
+            hide santachar with dissolve
 
-            show bro at right with moveinright
+            show brochar at right with moveinright
             bro "If there are presents missing, then there will be someone without presents this Christmas"
 
-            show sis at left with moveinleft
+            show sischar at left with moveinleft
             sis "I don't want people to be present-less this Christmas. Can we please help Mr.Santa?"
 
             menu:
@@ -103,10 +108,10 @@ label pro2:
                     bro "Let's do this then!"
                     pass
 
-    hide bro
-    hide sis
+    hide brochar
+    hide sischar
     with dissolve
-    show santa at right with moveinright
+    show santachar at right with moveinright
     santa "I thank you again young ones, I've got a map with the locations of the presents I lost."
     santa "I kept it somewhere here... Where did i keep it now?"
     jump mini2
@@ -114,13 +119,15 @@ label pro2:
     label foundhiddenitem:
         pass
 
-    scene santa_workshop with dissolve
-    show santa at right with moveinright
+    scene bg_santa_workshop with dissolve
+    show santachar at right with moveinright
     santa "Haa!! There it is, Well done in finding it."
-    scene bg_map with fade
+    scene bg_mapwpoint with fade
     santa "Yes, the presents that I've lost must be located in these 3 areas"
-    scene santa_workshop with fade
+    scene bg_santa_workshop with fade
+    show santachar at right with moveinright
     santa "I wish you the best of lucks on your adventure"
+    hide santachar with dissolve
 
     jump pro3
 
@@ -153,7 +160,7 @@ label pro2:
 
     label stand3pill:
         user "Lets stand besides the 3 pillars and see what happens?"
-        show bro at right with moveinright
+        show brochar at right with moveinright
         bro "That's a good idea"
         jump pro3
 
@@ -163,29 +170,29 @@ label pro2:
             jump mini1
             label foundhiddenitem:
                 user "Hey check this drawing out...."
-                show bro at right with moveinright
+                show brochar at right with moveinright
                 bro "What do we do now?"
                 $ la=True
                 jump choice1
 
     label lookarounddone:
-        show sis at left with moveinleft
+        show sischar at left with moveinleft
         sis "There's nothing more to be found"
         jump choice1
 
     label donothing:
         if nothingcount==0 and la==False:
-            show sis at left with moveinleft
+            show sischar at left with moveinleft
             sis "Lets look around for a bit and check if we can find something"
-            show bro at right with moveinright
+            show brochar at right with moveinright
             bro "Good thinking... Spread out"
             $ nothingcount=1
         elif nothingcount==1 and la==False:
-            show bro at right with moveinright
+            show brochar at right with moveinright
             bro "Don't just stand and laze around all day. Lend us a hand..."
             $ nothingcount=2
         elif la==True:
-            show sis at left with moveinleft
+            show sischar at left with moveinleft
             sis "There must be something we can do with the clue..."
             $ nothingcount=2
         jump choice1

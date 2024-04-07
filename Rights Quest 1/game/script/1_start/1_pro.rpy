@@ -7,24 +7,22 @@ label pro1:
     "The grandma always captured the heart of the children with the unique stories that would secretly hold moral values that would be needed by the children"
 
     scene black with dissolve
-    show granny_shadow
+    show grannychar at left with moveinleft:
+        alpha 0.25
     gran "Oh my, It seems [p1] slept off"
-    show granny_shadow at left with move
 
-    show sis_shadow
+    show sischar main at right with moveinright:
+        alpha 0.25
     sis "Wake up!! Granny is going to share a story with us!!"
-    show sis_shadow at right 
-    with move
 
     #hide all
     show bg_living at blink
-    pause(2.0)
-    scene bg_living
+    scene bg_living with dissolve
 
-    show sis main at right with moveinright
+    show sischar main at right with moveinright
     sis "Wow, someone slept like a baby"
 
-    show bro main at left with moveinleft
+    show brochar main at left with moveinleft
     bro "Do you even remember who you are?"
 
     user "Yeah kind of..."
@@ -51,36 +49,37 @@ label pro1:
         menu:
             "{i}(My name is : [name], right?){/i}"
             "Yes":
-                "My name's [name]"
+                user "My name's [name]"
             "No":
-                "I might have slept too much..."
+                user "I might have slept too much..."
                 jump name_set
     
     scene bg_living with dissolve
-    show bro main at right with moveinright
+    show brochar main at right with moveinright
     bro "The sleeping princess is finally awake"
     
-    show granny at left with moveinleft
+    show grannychar at left with moveinleft
     gran "Lets not make fun of the young one, now shall we begin?"    
 
-    hide bro
-    show sis main at right with moveinright
+    hide brochar with moveoutright
+    show sischar main at right with moveinright
     sis "Yes Granny lets begin!!"
     
     #hide all
     scene black with fade
-    show granny at left with dissolve:
+    show grannychar at left with dissolve:
         alpha 0.5 #transparency
     gran "Once upon a time, there lived 3 young children."
+    
     scene bg_forestwkid with dissolve #with 3kids
     gran "Although they were young, they were mature at heart"
     gran "On a snowy day, as Christmas draws near the children venture to a nearby forest to (what?)"
 
-    scene bg_forest with fade #wo 3kids
-    show bro at right with moveinright
+    scene bg_forest1 with fade #w hint in bg
+    show brochar at right with moveinright
     bro "Let's not be too late and get back"
 
-    show sis at left with moveinleft
+    show sischar at left with moveinleft
     sis "Hey, I spot with my eyes something red"
 
     bro "Where?"
@@ -89,14 +88,18 @@ label pro1:
 
     label redbag:
         pass
+
+    scene bg_forest with fade
     
-    show bro at right with moveinright
+    show brochar at right with moveinright
     bro "Hmmm, it's not something you would find lying around in a forest..."
 
-    show sis at left with moveinleft
-    sis "There's a tag that says 'If found, please return to {i}address{/i}'"
+    show sischar at left with moveinleft
+    sis "There's a tag that says '{u}If found, please return to {i}address{/i}{/u}'"
 
     bro "What do we do?"
+
+    user "Let's... "
 
     label d1:
         menu:

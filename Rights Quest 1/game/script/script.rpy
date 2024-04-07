@@ -8,24 +8,39 @@ default p1 = "none"
 default p2 = "none"
 default p3 = "none"
 default child = True
-# name of the character.
 
-define dev = Character("Dev",alpha=1.0)
-define gran = Character("Granny",alpha=1.0)
-define sis = Character("Eileen",alpha=1.0)
-define bro = Character("Keith",alpha=1.0)
-define user = Character("Me")
-define santa = Character("Santa",alpha=1.0)
+#blur fn
+image devchar = At('dev', sprite_highlight('dev'))
+
+image grannychar = At('granny', sprite_highlight('granny'))
+
+image sischar main= At('sis main', sprite_highlight('eileen'))
+image sischar = At('sis', sprite_highlight('eileen'))
+
+image brochar main= At('bro main', sprite_highlight('keith'))
+image brochar = At('bro', sprite_highlight('keith'))
+
+image userchar = At('no_char', sprite_highlight('me'))
+
+image santachar = At('santa', sprite_highlight('santa'))
+
+#char intro
+define dev = Character("Dev",image='devchar',callback=name_callback, cb_name='dev')
+define gran = Character("Granny",image='granchar',callback=name_callback, cb_name='granny')
+define sis = Character("Eileen",image='sischar',callback=name_callback, cb_name='eileen')
+define bro = Character("Keith",image='brocahr',callback=name_callback, cb_name='keith')
+define user = Character("Me",image='userchar',callback=name_callback, cb_name='me')
+define santa = Character("Santa",image='santachar',callback=name_callback, cb_name='santa')
 
 label start:
 
-    #jump pro2
+    jump pro2
 
     scene bg dev
-    show dev with moveinright
+    show devchar with moveinright
     dev "Oh, Hey there. Welcome to Rights Quest"
     dev "Before we begin, mind answering some question?"
-    show dev at right with move
+    show devchar at right with move
     
     menu:
         dev "User's gender is :"
