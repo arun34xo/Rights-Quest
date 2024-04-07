@@ -1,15 +1,15 @@
-
+#incomplete
 
 label mini1:
     scene bg room
     # fill the game screen with objects
-    $ InitGame("bg ruin", 1.0, (902, 595), "figure1")
+    $ InitGame("bg forest", 1.0, (902, 595), "figure")
 
     # show the game screen as a simple background
     $ GameAsBG()
     with dissolve
 
-    user "Lets find a clue"
+    user "Lets find a 'RED' object"
 
     # launch the game and play
     $ res = StartGame()
@@ -22,10 +22,10 @@ label mini1:
     if oRes:
         scene black with dissolve:
             pause(1.0)
-        scene HintOg with dissolve
-        user "Such a peculiar drawing"
+        scene close with dissolve
+        user "Hmm, it is unusual for a bag to be out here..."
         scene blank
-        jump foundhiddenitem
+        jump redbag
     else:
-        "{i}Hint : Search on the Walls of the ruins{/i}"
+        "{i}Hint : Look by the trees{/i}"
         jump mini1
