@@ -34,7 +34,7 @@ define santa = Character("Santa",image='santachar',callback=name_callback, cb_na
 
 label start:
 
-    jump pro2
+    #jump pro2
 
     scene bg dev
     show devchar with moveinright
