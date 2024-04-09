@@ -10,10 +10,10 @@ label pro3:
     show screen gameUI
 
     show brochar at right with moveinright
-    bro "Very well, blah blah"
+    bro "Very well, we shall victoriously be back, Santa!"
 
     show sischar at left with moveinleft
-    sis "blah blah"
+    sis "We won't let you down!"
 
     return
 

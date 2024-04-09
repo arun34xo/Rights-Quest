@@ -3,17 +3,17 @@ default nothingcount = 0
 label pro2:
 
     scene santa_field with fade
-    "As they go to the address in the tag, they reach a field filled with Reindeers and in the middle a house with smoke coming out of the chiminey is spoted"
+    "As they go to the address on the tag, they reach a field filled with Reindeers and in the middle, a house with smoke coming out of the chimney is spotted"
 
     show brochar at right with moveinright
     bro "Is this the right location?"
 
     show sischar at left with moveinleft
-    sis "It must be, it's magical"
+    sis "It must be, it's magical."
 
     scene bg_santahouse
     show brochar at right with moveinright
-    bro "Shall we Knock?"
+    bro "Shall we knock?"
 
     user "...."
     menu:
@@ -27,7 +27,7 @@ label pro2:
             pass
         "Scream":
             user "IS ANYONE IN THERE??"
-            sis "Noo... Why are you shouting?"
+            sis "Nooo... Why are you shouting?"
             hide brochar
             hide sischar
             with dissolve
@@ -49,34 +49,34 @@ label pro2:
             pass        
 
     show brochar at left with moveinleft
-    bro "We found your bag lying around in the forest"
+    bro "We found your bag lying around in the forest, Mister."
 
     hide brochar with dissolve
     show sischar at left with moveinleft
-    sis "We thought we might as well as return it to the owner"
+    sis "We thought we might as well as return it to the owner."
 
     "As the door opens, a large figure steps out with a pleasant smile"
 
     hide santachar with dissolve
     show santachar at right with moveinright
     sis "Oh my god it's Santa!!"
-    santa "Oh my!! What a merry surprise. I was puzzled on what I should do since I lost the bag"
-    santa "Come in children, Welcome to my humble abode"
+    santa "Oh my!! What a merry surprise. I was puzzled on what I should do ever since I lost the bag."
+    santa "Come in children, welcome to my humble abode."
 
     scene bg_santa_workshop1 with fade
 
     show santachar at right with moveinright
-    santa "I lost my bag as I was travelling back, Thank you young ones for finding the bag. You may have very well saved Christmas this year"
+    santa "I lost my bag as I was travelling back, Thank you young ones for finding the bag. You may have very well saved Christmas this year."
     
     show sischar at left with moveinleft
-    sis "Really? It's an honour Mr. Santa Clause"
+    sis "Really? It's an honour Mr. Santa Claus!"
     hide sischar with dissolve
 
     show brochar at left with moveinleft
-    bro "We only did what had to be done"
+    bro "We only did what had to be done."
     hide brochar with dissolve
 
-    santa "If you children would like to help, I have a few missing presents around the area"
+    santa "If you children would like to help, I have a few missing presents around the area."
 
     label d2:
         pass
@@ -84,23 +84,23 @@ label pro2:
     "What would you like to do?"
     menu:
         "Accept the request":
-            user "Of course, we don't mind helping someone at all"
+            user "Of course, we don't mind helping at all"
             santa "Such a kind child, Very well!"
             pass
 
         "Ask for the reward":
             user "Do we get a reward?"
-            santa "Such an eager child. Yes, I've prepared a series of challenges for you to overcome. Reward itself shall remain a surprise."
+            santa "Such an eager child. Yes, I've prepared a series of challenges for you to overcome. The reward shall remain a surprise."
             jump d2
 
         "Stay silent":
             hide santachar with dissolve
 
             show brochar at right with moveinright
-            bro "If there are presents missing, then there will be someone without presents this Christmas"
+            bro "If presents missing, then someone won't have presents this Christmas"
 
             show sischar at left with moveinleft
-            sis "I don't want people to be present-less this Christmas. Can we please help Mr.Santa?"
+            sis "I don't want people to be present-less this Christmas. Can we please help Santa?"
 
             menu:
                 "Ok, Let's Help":
@@ -113,7 +113,7 @@ label pro2:
     with dissolve
     show santachar at right with moveinright
     santa "I thank you again young ones, I've got a map with the locations of the presents I lost."
-    santa "I kept it somewhere here... Where did i keep it now?"
+    santa "I kept it somewhere here... Where did I keep it now? Hmmm..."
     jump mini2
 
     label foundhiddenitem:
@@ -121,12 +121,12 @@ label pro2:
 
     scene bg_santa_workshop with dissolve
     show santachar at right with moveinright
-    santa "Haa!! There it is, Well done in finding it."
+    santa "Ahh!! There it is, good job for finding it!"
     scene bg_mapwpoint with fade
-    santa "Yes, the presents that I've lost must be located in these 3 areas"
+    santa "Yes, the presents that I've lost are located in these 3 areas"
     scene bg_santa_workshop with fade
     show santachar at right with moveinright
-    santa "I wish you the best of lucks on your adventure"
+    santa "I wish you the best of luck on your adventure"
     hide santachar with dissolve
 
     jump pro3
