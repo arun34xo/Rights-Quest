@@ -9,6 +9,26 @@ default p2 = "none"
 default p3 = "none"
 default child = True
 
+
+#starting splash screen
+label splashscreen:
+    scene black
+    with Pause(1)
+
+    show text "Team 8 Interactive Prodcutions Presents" with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+
+    show text "Rights-Quest" with dissolve
+    with Pause(2)
+
+    hide text with dissolve
+    with Pause(1)
+    return
+
+
 #blur fn
 image devchar = At('dev', sprite_highlight('dev'))
 
@@ -31,6 +51,7 @@ define sis = Character("Eileen",image='sischar',callback=name_callback, cb_name=
 define bro = Character("Keith",image='brocahr',callback=name_callback, cb_name='keith')
 define user = Character("Me",image='userchar',callback=name_callback, cb_name='me')
 define santa = Character("Santa",image='santachar',callback=name_callback, cb_name='santa')
+define bully = Character("Bully", image='bullychar',callback=name_callback, cb_name='bully')
 
 label start:
 

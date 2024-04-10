@@ -128,15 +128,12 @@ label pro2:
     show santachar at right with moveinright
     santa "I wish you the best of luck on your adventure"
     hide santachar with dissolve
+    show brochar at right with moveinright
+    bro "Very well, we shall victoriously be back, Santa!"
 
-    jump pro3
-
-
-            
-
-
-
-
+    show sischar at left with moveinleft
+    sis "We won't let you down!"
+    jump L1
 
 
 
