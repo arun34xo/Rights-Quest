@@ -3,20 +3,27 @@ default completed=False
 default L1complete=False
 default L2complete=False
 default L3complete=False
+default recentcomplete=False
+default firsttime=True
 default c=0
+
+label first:
+    show brochar at right with moveinright
+    bro "Press the button for the char"
 
 label pro3:
 
     scene black with dissolve
     show screen gameUI
+    if firsttime==True:
+        jump first
+        $ firsttime=False
+    else:
+        bro "nayy"
+    bro "Yayy"
 
-    show brochar at right with moveinright
-    bro "Very well, we shall victoriously be back, Santa!"
-
-    show sischar at left with moveinleft
-    sis "We won't let you down!"
-
-    return
+    if c==3:
+        
 
 
 

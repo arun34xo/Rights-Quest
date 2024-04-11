@@ -103,27 +103,39 @@ screen MapUI:
         ypos 316
         idle "map/santa_idle.png"
         hover "map/santa_hover.png"
-        action Jump("Santa_home")
+        action Jump("end")
 
     imagebutton:
         xpos 1448
         ypos 746
-        idle "map/L1_idle.png"
-        hover "map/L1_hover.png"
+        if L1complete==False:
+            idle "map/L1_idle.png"
+            hover "map/L1_hover.png"
+        else:
+            idle "map/L1_idle.png"
+            hover "map/L1_hover.png"
         action Jump("L1")
         
     imagebutton:
         xpos 1475
         ypos 232
-        idle "map/L2_idle.png"
-        hover "map/L2_hover.png"
+        if L2complete==False:
+            idle "map/L2_idle.png"
+            hover "map/L2_hover.png"
+        else:
+            idle "map/L2_idle.png"
+            hover "map/L2_hover.png"
         action Jump("L2")
 
     imagebutton:
         xpos 415
         ypos 754
-        idle "map/L3_idle.png"
-        hover "map/L3_idle hover.png"
+        if L3complete==False:
+            idle "map/L3_idle.png"
+            hover "map/L3_hover.png"
+        else:
+            idle "map/L3_idle.png"
+            hover "map/L3_hover.png"
         action Jump("L3")
 
 #######################################################################################################################################

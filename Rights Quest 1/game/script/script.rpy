@@ -55,7 +55,7 @@ define bully = Character("Bully", image='bullychar',callback=name_callback, cb_n
 
 label start:
 
-    #jump pro2
+    jump foundhiddenitem
 
     scene bg dev
     show devchar with moveinright

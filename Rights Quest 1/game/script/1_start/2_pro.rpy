@@ -122,18 +122,22 @@ label pro2:
     scene bg_santa_workshop with dissolve
     show santachar at right with moveinright
     santa "Ahh!! There it is, good job for finding it!"
+
     scene bg_mapwpoint with fade
     santa "Yes, the presents that I've lost are located in these 3 areas"
+
     scene bg_santa_workshop with fade
     show santachar at right with moveinright
     santa "I wish you the best of luck on your adventure"
     hide santachar with dissolve
+
     show brochar at right with moveinright
     bro "Very well, we shall victoriously be back, Santa!"
 
     show sischar at left with moveinleft
     sis "We won't let you down!"
-    jump L1
+
+    jump pro3
 
 
 

@@ -86,6 +86,7 @@ label L1:
     hide brochar
     hide sischar
     hide bullychar
+    with dissolve
 
     "The bully leaves without causing any harm."
     
@@ -108,4 +109,9 @@ label L1:
     show sischar at right with moveinright
     sis "Look there! Is that what I think it is?!"
     
-#jump mini3
+    #jump mini3
+
+    $ L1complete=True
+    $ c = c + 1
+    jump pro3
+    
