@@ -1,5 +1,9 @@
 label L1:
     #The Right to Protection granted the strength to shield oneself and others from harm
+    if L1complete==True:
+        jump completedD
+    else: 
+        pass
     scene snowy_field with fade
     "The kids walk downtown looking for Santa's missing presents. Ominous dark clouds roll in."
 
@@ -112,6 +116,6 @@ label L1:
     #jump mini3
 
     $ L1complete=True
-    $ c = c + 1
+    $ c = c+1
     jump pro3
     
