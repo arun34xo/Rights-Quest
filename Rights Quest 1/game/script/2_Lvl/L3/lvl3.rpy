@@ -4,8 +4,6 @@ label L3:
         jump completedD
     else: 
         pass
-    hide unicorn with dissolve
-    scene somewhere with fade
     "trial"
 
     $ L3complete = True

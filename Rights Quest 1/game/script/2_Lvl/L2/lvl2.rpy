@@ -1,153 +1,173 @@
 label L2:
     #The Right against discrimination.
-    scene town_bg with fade
+    if L3complete==True:
+        jump completedD
+    else: 
+        pass
+
+    scene bg_town with fade
     "The kids approach the town and find their way to a complex of restaurants."
 
-    show brochar at left with moveinleft
+    show brochar at right with moveinright
     bro "Sighhh… I’m starving."
 
-    show sischar at right with moveinright
+    show sischar at left with moveinleft
     sis "Me too! Let’s get something to eat!"
-
-    show brochar at left 
     bro "Look! I see a restaurant! Let’s get ourselves a bowl of noodles!"
 
     hide brochar
-    hide sischar
+    hide sischar 
+    with dissolve
 
-    scene restaurant_bg with fade
+    scene bg_restaurant with fade
 
-    "The kids approach the restaurant."
-
-    show ownerchar at left 
+    show ownerchar at right with moveinright 
     storeowner "Hello there, how can I help you kids?"
 
-    show sischar at right with moveinright
+    show sischar at left with moveinleft
     sis "Hi Mister! We’d like a bowl of noodles each!"
-
-    show ownerchar at left
     storeowner "Alright! What kind of noodles would you kids like?"
 
-    hide ownerchar
-
-    show sischar at right with moveinright
-    sis "I’d like a bowl of chicken noodles!"
-
-    show brochar at left with moveinleft
-    bro "I'd like a bowl of egg noodles."
-
-    menu:
-        "Ramen noodles":
-            user "I’d like a bowl of Ramen noodles!"
-            hide brochar
-            hide sischar
-            show ownerchar at left with moveinleft
-            storeowner "That's a fine choice you've chosen, child!"
-            pass
-        "Egg noodles":
-            user "I'd like a bowl of egg noodles!"
-            hide brochar
-            hide sischar
-            show ownerchar at left with moveinleft
-            storeowner "That's a fine choice you've chosen, child!"
-            pass
-        "Egg noodles":
-            user "I'd like a bowl of Chow mein noodles"
-            hide brochar
-            hide sischar
-            show ownerchar at left with moveinleft
-            storeowner "That's a fine choice you've chosen, child!"
-            pass
-
-    hide ownerchar
-
-    show sischar at right with moveinleft
-    sis "That will be all, Mister!"
+    show sischar at left with moveinleft
+    sis "I’d like a bowl of Chicken noodles!"
+    hide sischar with dissolve
 
     show brochar at left with moveinleft
-    bro "We will be waiting, Mister!"
+    bro "I'd like a bowl of Chow mein noodles."
+
+    if gender=='male':
+        storeowner "And what about this young Gentleman?"
+    elif gender=='female':
+        storeowner "And what about this young Lady?"
+    else:
+        storeowner "And what about this young child?"
 
     hide brochar
-    hide sischar
+    with dissolve
 
-    show ownerchar at left with moveinleft
+    menu:
+        "I'd like to eat ..."
+        "Ramen":
+            user "I’d like a bowl of Ramen!"
+            show ownerchar at right with moveinright
+            storeowner "A Chicken Noodles, Chow mein and a Ramen coming right up!!"
+            pass
+        "Chicken noodles":
+            user "I'd like a bowl of Chicken noodles!"
+            show ownerchar at right with moveinright
+            storeowner "2 Chicken Noodles and a Chow mein coming right up!!"
+            pass
+        "Chow mein noodles":
+            user "I'd like a bowl of Chow mein noodles"
+            show ownerchar at right with moveinright
+            storeowner "2 Chow mein and Chicken Noodle coming right up!!"
+            pass
+
+
+    show sischar at left with moveinleft
+    sis "That will be all, Thank you!"
+
+    show ownerchar at right with moveinright
     storeowner "Delightful! I’ll get your food ready in jiffy!"
 
     hide ownerchar
+    hide sischar 
+    with dissolve
 
-    show mrsgraychar at right with moveinright
-    mrsgray "Hello there, I’d like to get a bowl of noodles?"
+    show mrsgraychar at left with moveinleft
+    mrsgray "Hello there, I’d like to order a Ramen"
 
-    show ownerchar at left with moveinleft
-    storeowner "I shall not serve you. We don’t serve your kind of people."   
+    show ownerchar at right with moveinright
+    storeowner "Sorry, We don’t serve your kind of people."   
 
-    hide ownerchar
+    hide ownerchar with dissolve
+
+    show brochar at right with moveinright
+    bro "Excuse me? What do you mean by \"your kind of people\" ?"
+
+    show mrsgraychar at left with moveinleft
+    mrsgray "I believe I am being discriminated due to the color of my skin..."
+
+    label d3:
+        scene bg_restaurant with dissolve
+        menu:
+            user "..."
+            "Speak up against discrimination":
+                user "That's absurd!! Everyone deserves to be treated equally!"
+                pass
+            "Watch and Stay Silent":
+                jump discrimination
+                show sischar at left with moveinleft
+                sis "We can't let this go!"
+                hide sis with dissolve
+                jump d3
 
     show brochar at left with moveinleft
-    bro "Excuse me? What do you mean by "your kind of people"?"
-
-    show mrsgraychar at right
-    mrsgray "I believe he's referring to my color. It seems he's discriminating against me because of it."
-
-    menu:
-        "Stay Silent":
-            hide brochar
-            hide mrsgraychar
-            show sischar at left with moveinleft
-            sis "We can't let this go!"
-        "Speak up against discrimination":
-            hide brochar
-            hide mrsgraychar
-            user "That's not fair! Everyone deserves to be treated equally!"
-
-    hide mrsgraychar
-
-    show brochar at left with moveinleft
-    bro "Yeah, you can't just refuse to serve someone because of who they are or what they have."
+    bro "Yeah, you can't just refuse to serve someone just because of thier skin color"
 
     show ownerchar at right with moveinright
     storeowner "I have the right to refuse service to anyone I want!"
-
-    show brochar at left
     bro "Actually, you don't. Discrimination based on color is against the law"
 
-    hide brochar
+    hide brochar with dissolve
 
     show sischar at left with moveinleft
-    sis "That's right! We have the right against discrimination!"
+    sis "That's right! We have the {b}Right Against discrimination{/b}!"
 
     show ownerchar at right with moveinright
     storeowner "Fine! I'll serve her this time, but I don't have to like it."
 
     hide sischar
     hide ownerchar
+    with dissolve
     
     "The store owner reluctantly serves Mrs.Gray her noodles"
     
-    show mrsgraychar at right with moveinright
+    show mrsgraychar at left with moveinleft
     mrsgray "Thank you for standing up for me, kids. It's important to fight against discrimination whenever we encounter it."
 
-    show brochar at left with moveinleft
-    bro "No problem, Mrs. Gray. We believe everyone deserves to be treated withrespect and fairness."
-
+    show brochar at right with moveinright
+    bro "Our pleasure Maam, we believe everyone deserves to be treated with respect and fairness."
+    mrsgray "May I enquire what brings 3 bright children out on this cold day?"
+    
     menu:
-        "Glad we could help, Ma'am!":
-            hide mrsgraychar
+        user "We're out to..."
+        "To Search for a missing present":
+            mrsgray "Ohh, is that so?"
+            hide brochar with dissolve
             show sischar at right with moveinright
-            sis "Let's eat our noodles together and continue our quest!"
-
-        "Speak up against discrimination":
-            hide mrsgraychar
+            sis "Yes, Santa requested for our help to find it."
+        "To Eat some warm noodles":
+            mrsgray "haha, nothing beats a soup that warms one's soul"
+            hide brochar with dissolve
             show sischar at right with moveinright
-            sis "Let's eat our noodles together and continue our quest!"
+            sis "True, we have to hunt for Santa's missing presents after this"
+        "To Play in the snow":
+            mrsgray "haha, such innocent souls. Be sure not to catch a cold, dear younglings"
+            hide brochar with dissolve
+            show sischar at right with moveinright
+            sis "We'll be careful, meanwhile we have to hunt for Santa's missing presents"
+    
+    mrsgray "Now that I recall, I came across a gift-box on my way here"
+    sis "Could it be the one we are searching for?"
+    
+    hide sischar with dissolve
+    show brochar at right with moveinright
+    bro "Might be, Mind telling us where you saw it?"
+    mrsgray "I took it to the \"Lost & Found\", it should still be there"
+    bro "I see, thank you!"
+    mrsgray "No, it's the least I can do for younglings that stood up for me."
 
-    hide brochar
-    hide sischar
+    hide brochar with dissolve
+    show sischar at right with moveinright
+    sis "Lets dig in before the soup goes cold"
 
-    "The kids and Mrs. Gray enjoy their noodles together before setting of on their next adventure"
+    scene black with dissolve
+    "As they share their stories and eat, the granny thanks the children yet again for their courage and go their own separate ways"
+    "The children arrive at the \"Lost & Found\""
 
-    #scene somewhere with fade
-    #"trial"
+    #granny finds the gift beforehand and keeps it at loft and found, kids find the present from it
+
     $ L2complete = True
     $ c = c+1
-    #jump pro3
+    jump pro3

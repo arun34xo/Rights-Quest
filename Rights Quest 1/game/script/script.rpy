@@ -1,8 +1,8 @@
 ﻿# The script of the game goes in this file.
-
 init python:
     res = False
 
+#arg used in game
 default gender = "none"
 default p1 = "none"
 default p2 = "none"
@@ -52,6 +52,9 @@ define bro = Character("Keith",image='brocahr',callback=name_callback, cb_name='
 define user = Character("Me",image='userchar',callback=name_callback, cb_name='me')
 define santa = Character("Santa",image='santachar',callback=name_callback, cb_name='santa')
 define bully = Character("Bully", image='bullychar',callback=name_callback, cb_name='bully')
+define storeowner = Character("StoreOwner", image='storeownerchar',callback=name_callback, cb_name='storeowner')
+define mrsgray = Character("Gray", image='graychar',callback=name_callback, cb_name='mrsgray')
+
 
 label start:
 
