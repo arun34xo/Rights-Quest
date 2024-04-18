@@ -18,6 +18,8 @@ label splashscreen:
     show text "Team 8 Interactive Prodcutions Presents" with dissolve
     with Pause(2)
 
+    $renpy.movie_cutscene('c1.webm')
+
     hide text with dissolve
     with Pause(1)
 
@@ -27,7 +29,6 @@ label splashscreen:
     hide text with dissolve
     with Pause(1)
     return
-
 
 #blur fn
 image devchar = At('dev', sprite_highlight('dev'))
