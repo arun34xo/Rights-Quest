@@ -2,7 +2,7 @@ default shouted = False
 default nothingcount = 0
 label pro2:
 
-    scene santa_field with fade
+    scene bg_santa_field with fade
     "As they go to the address on the tag, they reach a field filled with Reindeers and in the middle, a house with smoke coming out of the chimney is spotted"
 
     show brochar at right with moveinright
@@ -11,12 +11,12 @@ label pro2:
     show sischar at left with moveinleft
     sis "It must be, it's magical."
 
-    scene bg_santahouse
+    scene bg_santahouse with fade
     show brochar at right with moveinright
     bro "Shall we knock?"
 
-    user "...."
     menu:
+        user "hmm...."
         "Knock at the door":
             hide brochar
             hide sischar

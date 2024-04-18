@@ -167,6 +167,7 @@ label L2:
     "The children arrive at the \"Lost & Found\""
 
     #granny finds the gift beforehand and keeps it at loft and found, kids find the present from it
+    #jump mini4
 
     $ L2complete = True
     $ c = c+1

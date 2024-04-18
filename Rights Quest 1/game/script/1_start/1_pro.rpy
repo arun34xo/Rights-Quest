@@ -88,8 +88,6 @@ label pro1:
 
     label redbag:
         pass
-
-    scene bg_forest with fade
     
     show brochar at right with moveinright
     bro "Hmmm, it's not something you would find lying around in a forest..."
@@ -99,10 +97,9 @@ label pro1:
 
     bro "What do we do?"
 
-    user "Let's... "
-
     label d1:
         menu:
+            user "Let's... "
             "Let's return it":
                 pass
             "Do nothing...":

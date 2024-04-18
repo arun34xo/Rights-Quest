@@ -22,7 +22,7 @@ label mini1:
     if oRes:
         scene black with dissolve:
             pause(1.0)
-        scene closeup with dissolve
+        scene bg_forest with dissolve
         user "Hmm, it is unusual for a bag to be out here..."
         jump redbag
     else:

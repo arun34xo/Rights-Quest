@@ -58,7 +58,7 @@ define mrsgray = Character("Gray", image='graychar',callback=name_callback, cb_n
 
 label start:
 
-    jump foundhiddenitem
+    jump pro3
 
     scene bg dev
     show devchar with moveinright

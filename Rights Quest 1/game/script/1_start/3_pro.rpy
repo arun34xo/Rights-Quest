@@ -31,14 +31,16 @@ label pro3:
                 jump call_mapUI
             "Go to Mr. Santa's home":
                 jump end
-            "------------------"
+            user "Let's ...."
     else:
         show screen gameUI
         if firsttime==False:
-            scene black with dissolve
+            scene black with dissolve #forrest2
             show sischar at left with moveinleft
             sis "Let's get this over with and go warm ourselves... I'm freezing out here"
+            Pause(1000)
         else:
             scene black with dissolve #helps user be familiar with the map
             show brochar at right with moveinright
-            bro "Pressing the Map Button helps access the Map, Convinent right!!"
+            bro "Pressing the Map Button accesses the Map, Convinent right!!"
+            Pause(1000)

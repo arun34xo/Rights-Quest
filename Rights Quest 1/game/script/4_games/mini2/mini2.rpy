@@ -9,7 +9,7 @@ label mini2:
     $ GameAsBG()
     with dissolve
 
-    user "Find the Map"
+    user "Let's help find the Map"
 
     # launch the game and play
     $ res = StartGame()
