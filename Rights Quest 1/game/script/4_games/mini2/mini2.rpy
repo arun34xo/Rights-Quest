@@ -1,7 +1,7 @@
 #done
 
 label mini2:
-    scene 
+    scene bg_santa_workshop
     # fill the game screen with objects
     $ InitGame("bg_santa_workshop", 1.0, (825, 660), "figure1")
 

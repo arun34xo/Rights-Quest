@@ -22,25 +22,53 @@ label completedD:
 
 
 label pro3:
+    $child = True
     if child==True:
         scene black with dissolve
         show brochar at right with moveinright
         bro "What's the next plan of action"
+        label d4:
+            pass
         menu:
-            "Use map to find next present":
-                jump call_mapUI
-            "Go to Mr. Santa's home":
+            "Let's go ..."
+            "Find the 1st present":
+                if L1complete == True:
+                    show sischar at left with moveinleft
+                    sis "We found that present, let's search else where"
+                    jump d4
+                else:
+                    show sischar at left with moveinleft
+                    sis "Very well, let's be on our way then!!"
+                    jump L1
+            "Find the 2nd present":
+                if L2complete == True:
+                    show sischar at left with moveinleft
+                    sis "We found that present, let's search else where"
+                    jump d4
+                else:
+                    show sischar at left with moveinleft
+                    sis "Onwards we go!!"
+                    jump L2
+            "Find the 3rd present":
+                if L3complete == True:
+                    show sischar at left with moveinleft
+                    sis "We found that present, let's search else where"
+                    jump d4
+                else:
+                    show sischar at left with moveinleft
+                    sis "Let's go, it's freezing out here!!"
+                    jump L3
+            "To Mr. Santa's home":
                 jump end
-            user "Let's ...."
     else:
         show screen gameUI
         if firsttime==False:
             scene black with dissolve #forrest2
             show sischar at left with moveinleft
             sis "Let's get this over with and go warm ourselves... I'm freezing out here"
-            Pause(1000)
+            $ renpy.pause(100, hard=True)
         else:
             scene black with dissolve #helps user be familiar with the map
             show brochar at right with moveinright
             bro "Pressing the Map Button accesses the Map, Convinent right!!"
-            Pause(1000)
+            $ renpy.pause(100, hard=True)

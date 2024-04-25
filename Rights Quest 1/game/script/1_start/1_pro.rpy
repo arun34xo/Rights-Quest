@@ -73,7 +73,7 @@ label pro1:
     
     scene bg_forestwkid with dissolve #with 3kids
     gran "Although they were young, they were mature at heart"
-    gran "On a snowy day, as Christmas draws near the children venture to a nearby forest to (what?)"
+    gran "On a snowy day, as Christmas draws near the children ventured to a nearby forest to gather firewood and play in the snow"
 
     scene bg_forest1 with fade #w hint in bg
     show brochar at right with moveinright

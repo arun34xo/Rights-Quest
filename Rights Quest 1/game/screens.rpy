@@ -558,13 +558,13 @@ screen about():
         vbox:
 
             label "[config.name!t]"
-            text _("Version [config.version!t]\n")
+            text _("Version 2.9\n")
 
             ## gui.about is usually set in options.rpy.
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Made by a team of dedicated students in-order to help children learn about their rights in a visual, auditory and interactive way. \nFor more information - Contact : xxx123xxx678")
 
 
 style about_label is gui_label
