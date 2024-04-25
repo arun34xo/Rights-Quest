@@ -45,6 +45,7 @@ label L1:
     hide sischar
 
     "The Children rush through the storm towards the old shed."
+    scene inside_shed with fade
     show brochar at left with moveinleft
     bro "Everyone get inside, quick!"
     hide brochar

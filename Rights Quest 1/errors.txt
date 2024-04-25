@@ -2,9 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script/2_Lvl/L1/lvl1.rpy", line 96: expected menuitem
-    pass
-    ^
+File "game/script/1_start/3_pro.rpy", line 41: expected statement.
+    Pause(1000)
+               ^
+
+File "game/script/1_start/3_pro.rpy", line 46: expected statement.
+    Pause(1000)
+               ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Wed Apr 10 12:44:25 2024
+Thu Apr 25 21:37:56 2024

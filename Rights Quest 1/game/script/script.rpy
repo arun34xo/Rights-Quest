@@ -1,4 +1,4 @@
-﻿# The script of the game goes in this file.
+# The script of the game goes in this file.
 init python:
     res = False
 
@@ -15,7 +15,7 @@ label splashscreen:
     scene black
     with Pause(1)
 
-    show text "Team 8 Interactive Prodcutions Presents" with dissolve
+    show text "Team 8 Interactive Productions Presents" with dissolve
     with Pause(2)
 
     hide text with dissolve
@@ -28,10 +28,12 @@ label splashscreen:
     with Pause(1)
     return
 
+#movie bg fn
+image snowy_field = Movie(size=(1920, 1080), channel="movie", play="images/snowy_field.ogv")
+
 
 #blur fn
 image devchar = At('dev', sprite_highlight('dev'))
-
 image grannychar = At('granny', sprite_highlight('granny'))
 
 image sischar main= At('sis main', sprite_highlight('eileen'))
@@ -44,6 +46,8 @@ image userchar = At('no_char', sprite_highlight('me'))
 
 image santachar = At('santa', sprite_highlight('santa'))
 
+image storeownerchar = At('storeowner', sprite_highlight('storeowner'))
+
 #char intro
 define dev = Character("Dev",image='devchar',callback=name_callback, cb_name='dev')
 define gran = Character("Granny",image='granchar',callback=name_callback, cb_name='granny')
@@ -52,13 +56,13 @@ define bro = Character("Keith",image='brocahr',callback=name_callback, cb_name='
 define user = Character("Me",image='userchar',callback=name_callback, cb_name='me')
 define santa = Character("Santa",image='santachar',callback=name_callback, cb_name='santa')
 define bully = Character("Bully", image='bullychar',callback=name_callback, cb_name='bully')
-define storeowner = Character("StoreOwner", image='storeownerchar',callback=name_callback, cb_name='storeowner')
+define storeowner = Character("Store Owner", image='storeownerchar',callback=name_callback, cb_name='storeowner')
 define mrsgray = Character("Gray", image='graychar',callback=name_callback, cb_name='mrsgray')
 
 
 label start:
 
-    jump pro3
+    jump foundhiddenitem
 
     scene bg dev
     show devchar with moveinright
