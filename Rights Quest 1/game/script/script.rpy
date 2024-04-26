@@ -1,4 +1,4 @@
-# The script of the game goes in this file.
+﻿# The script of the game goes in this file.
 init python:
     res = False
 
@@ -46,6 +46,12 @@ image userchar = At('no_char', sprite_highlight('me'))
 
 image santachar = At('santa', sprite_highlight('santa'))
 
+image bullychar = At('bully', sprite_highlight('bully'))
+
+image mrsgraychar = At('mrsgray', sprite_highlight('mrsgray'))
+
+image bullychar = At('bully', sprite_highlight('bully'))
+
 image storeownerchar = At('storeowner', sprite_highlight('storeowner'))
 
 #char intro
@@ -57,7 +63,7 @@ define user = Character("Me",image='userchar',callback=name_callback, cb_name='m
 define santa = Character("Santa",image='santachar',callback=name_callback, cb_name='santa')
 define bully = Character("Bully", image='bullychar',callback=name_callback, cb_name='bully')
 define storeowner = Character("Store Owner", image='storeownerchar',callback=name_callback, cb_name='storeowner')
-define mrsgray = Character("Gray", image='graychar',callback=name_callback, cb_name='mrsgray')
+define mrsgray = Character("Gray", image='mrsgraychar',callback=name_callback, cb_name='mrsgray')
 
 
 label start:

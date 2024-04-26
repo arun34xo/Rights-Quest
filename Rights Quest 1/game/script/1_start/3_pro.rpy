@@ -22,7 +22,6 @@ label completedD:
 
 
 label pro3:
-    $child = True
     if child==True:
         scene black with dissolve
         show brochar at right with moveinright
