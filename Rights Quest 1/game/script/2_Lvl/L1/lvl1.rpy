@@ -4,7 +4,7 @@ label L1:
         jump completedD
     else: 
         pass
-    scene snowy_field with fade
+    scene snow_field with fade
     "The kids walk downtown looking for Santa's missing presents. Ominous dark clouds roll in."
 
     show sischar at right with moveinright
@@ -110,13 +110,21 @@ label L1:
 
     hide sischar
     show brochar at left with moveinleft
-    bro "We’ve come a little far. It might be somewhere near here."
+    bro "Oh wait! is that what I think it is?!"
     show sischar at right with moveinright
-    sis "Look there! Is that what I think it is?!"
-    
-    #jump mini3
+    sis "Oh my goodness, look! Is that Santa's present?!"
 
-    $ L1complete=True
-    $ c = c+1
-    jump pro3
+    jump mini3
     
+    label foundhiddenitem1:
+        pass
+
+    show sischar at left with moveinleft
+    sis "Yay! We found one of Santa's missing presents!"
+    show brochar at right with moveinright
+    bro "Good job! We only have a few more to go!"
+
+    jump pro3
+
+    $L1complete=True
+    $c = 1

@@ -2,13 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script/1_start/3_pro.rpy", line 41: expected statement.
-    Pause(1000)
-               ^
+File "game/script/2_Lvl/L1/lvl1.rpy", line 129: expected statement.
+    L1complete=True
+              ^
 
-File "game/script/1_start/3_pro.rpy", line 46: expected statement.
-    Pause(1000)
-               ^
+File "game/script/2_Lvl/L1/lvl1.rpy", line 130: expected statement.
+    c = c+1
+      ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Thu Apr 25 21:37:56 2024
+Sat Apr 27 09:30:09 2024

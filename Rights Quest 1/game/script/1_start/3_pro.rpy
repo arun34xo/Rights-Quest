@@ -10,7 +10,7 @@ default c=0
 label completedD:
     if c<3:
         show brochar at right with moveinright
-        bro "Pretty sure we found the Present from that region, right?"
+        bro "Pretty sure we found the Present from that area, right?"
         show sischar at left with moveinleft
         sis "Yes, I believe that we have searched that area. Let's look else where."
     else:
@@ -62,7 +62,7 @@ label pro3:
     else:
         show screen gameUI
         if firsttime==False:
-            scene black with dissolve #forrest2
+            scene black with dissolve #forest2
             show sischar at left with moveinleft
             sis "Let's get this over with and go warm ourselves... I'm freezing out here"
             $ renpy.pause(100, hard=True)

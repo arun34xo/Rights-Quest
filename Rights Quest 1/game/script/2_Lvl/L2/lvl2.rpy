@@ -21,7 +21,7 @@ label L2:
 
     scene bg_restaurant with fade
 
-    show storeownerchar at right with moveinright 
+    show storeowner at right with moveinright 
     storeowner "Hello there, how can I help you kids?"
 
     show sischar at left with moveinleft
@@ -49,17 +49,17 @@ label L2:
         "I'd like to eat ..."
         "Ramen":
             user "I’d like a bowl of Ramen!"
-            show storeownerchar at right with moveinright
+            show storeowner at right with moveinright
             storeowner "A Chicken Noodles, Chow mein and a Ramen coming right up!!"
             pass
         "Chicken noodles":
             user "I'd like a bowl of Chicken noodles!"
-            show storeownerchar at right with moveinright
+            show storeowner at right with moveinright
             storeowner "2 Chicken Noodles and a Chow mein coming right up!!"
             pass
         "Chow mein noodles":
             user "I'd like a bowl of Chow mein noodles"
-            show storeownerchar at right with moveinright
+            show storeowner at right with moveinright
             storeowner "2 Chow mein and Chicken Noodle coming right up!!"
             pass
 
@@ -67,7 +67,7 @@ label L2:
     show sischar at left with moveinleft
     sis "That will be all, Thank you!"
 
-    show storeownerchar at right with moveinright
+    show storeowner at right with moveinright
     storeowner "Delightful! I’ll get your food ready in jiffy!"
 
     hide ownerchar
@@ -77,10 +77,10 @@ label L2:
     show mrsgraychar at left with moveinleft
     mrsgray "Hello there, I’d like to order a Ramen"
 
-    show storeownerchar at right with moveinright
+    show storeowner at right with moveinright
     storeowner "Sorry, We don’t serve your kind of people."   
 
-    hide storeownerchar with dissolve
+    hide storeowner with dissolve
 
     show brochar at right with moveinright
     bro "Excuse me? What do you mean by \"your kind of people\" ?"
@@ -105,7 +105,7 @@ label L2:
     show brochar at left with moveinleft
     bro "Yeah, you can't just refuse to serve someone just because of thier skin color"
 
-    show storeownerchar at right with moveinright
+    show storeowner at right with moveinright
     storeowner "I have the right to refuse service to anyone I want!"
     bro "Actually, you don't. Discrimination based on color is against the law"
 
@@ -114,11 +114,11 @@ label L2:
     show sischar at left with moveinleft
     sis "That's right! We have the {b}Right Against Discrimination{/b}!"
 
-    show storeownerchar at right with moveinright
+    show storeowner at right with moveinright
     storeowner "Fine! I'll serve her this time, but I don't have to like it."
 
     hide sischar
-    hide storeownerchar
+    hide storeowner
     with dissolve
     
     "The store owner reluctantly serves Mrs.Gray her noodles"
@@ -160,15 +160,16 @@ label L2:
 
     hide brochar with dissolve
     show sischar at right with moveinright
-    sis "Lets dig in before the soup goes cold"
+    sis "Lets dig in before the noodles go cold"
 
     scene black with dissolve
-    "As they share their stories and eat, the granny thanks the children yet again for their courage and go their own separate ways"
+    "As they share their stories and eat, the Mrs.Gray thanks the children yet again for their courage and go their own separate ways"
     "The children arrive at the \"Lost & Found\""
 
+    show brochar with moveinright 
+
     #granny finds the gift beforehand and keeps it at loft and found, kids find the present from it
-    #jump mini4
 
     $ L2complete = True
     $ c = c+1
-    jump pro3
+    #jump mini4
