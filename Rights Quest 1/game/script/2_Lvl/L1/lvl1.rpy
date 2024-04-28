@@ -124,7 +124,7 @@ label L1:
     show brochar at right with moveinright
     bro "Good job! We only have a few more to go!"
 
+    $L1complete=True
+    $c = c+1
     jump pro3
 
-    $L1complete=True
-    $c = 1
