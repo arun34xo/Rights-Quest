@@ -20,13 +20,14 @@ transform blink:
     alpha 0.0
 
 #######################################################################################################################################
-#auto-blurring
-
+#auto-blurring and auto-speech
 define sprite_focus = {}
 default speaking_char = None
 
 transform sprite_highlight(sprite_name):
     function SpriteFocus(sprite_name)
+
+define sounds = ['audio/type/A1.ogg', 'audio/type/A2.ogg', 'audio/type/A3.ogg', 'audio/type/A4.ogg', 'audio/type/A5.ogg', 'audio/type/B1.ogg', 'audio/type/B2.ogg', 'audio/type/B3.ogg', 'audio/type/B4.ogg', 'audio/type/B5.ogg']
 
 init -10 python:
     import math
@@ -35,6 +36,10 @@ init -10 python:
         global speaking_char
         if event == "begin":
             speaking_char = name
+        if event == "show":
+            renpy.sound.queue(renpy.random.choice(sounds), loop=True)
+        elif event == "slow_done" or event == "end":
+            renpy.sound.stop()
 
     class SpriteFocus(object):
         def __init__(self, char_name):
@@ -140,4 +145,24 @@ screen MapUI:
         action Jump("L3")
 
 #######################################################################################################################################
-#
+#auto sound
+'''
+define sounds = ['audio/type/A1.ogg', 'audio/type/A2.ogg', 'audio/type/A3.ogg', 'audio/type/A4.ogg', 'audio/type/A5.ogg', 'audio/type/B1.ogg', 'audio/type/B2.ogg', 'audio/type/B3.ogg', 'audio/type/B4.ogg', 'audio/type/B5.ogg']
+
+init python: 
+
+    def voice_callback(event, interact=True, **kwargs):
+
+        if not interact: 
+
+            return 
+
+        while event == "show_done": 
+
+            renpy.sound.queue(renpy.random.choice(sounds), loop=True)
+
+            if event == "slow_done":
+
+                renpy.sound.stop() 
+                
+'''
