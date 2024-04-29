@@ -1,7 +1,7 @@
 label mini3:
     scene inside_shed
     # fill the game screen with objects
-    $ InitGame("inside_shed", 1.0, (825, 720), "present1")
+    $ InitGame("bg_inside_shed", 1.0, (825, 720), "present1")
 
     # show the game screen as a simple background
     $ GameAsBG()
@@ -25,3 +25,4 @@ label mini3:
         jump foundhiddenitem1
     else:
         "{i}Hint : On of the shelves below the lantern.{/i}"
+        jump mini3

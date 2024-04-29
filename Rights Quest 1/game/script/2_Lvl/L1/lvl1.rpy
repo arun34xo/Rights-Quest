@@ -4,7 +4,7 @@ label L1:
         jump completedD
     else: 
         pass
-    scene snow_field with fade
+    scene bg_snow_field with fade
     "The kids walk downtown looking for Santa's missing presents. Ominous dark clouds roll in."
 
     show sischar at right with moveinright
@@ -45,7 +45,7 @@ label L1:
     hide sischar
 
     "The Children rush through the storm towards the old shed."
-    scene inside_shed with fade
+    scene bg_inside_shed with fade
     show brochar at left with moveinleft
     bro "Everyone get inside, quick!"
     hide brochar
@@ -126,5 +126,6 @@ label L1:
 
     $L1complete=True
     $c = c+1
+
     jump pro3
 
