@@ -10,7 +10,7 @@ label mini2:
     with dissolve
 
     user "Let's help find the Map"
-
+    window hide
     # launch the game and play
     $ res = StartGame()
 

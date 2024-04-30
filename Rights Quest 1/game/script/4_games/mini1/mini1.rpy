@@ -9,7 +9,7 @@ label mini1:
     $ GameAsBG()
     with dissolve
 
-    user "Lets find a 'RED' object" #change red to red colour
+    user "Lets find a {color=#FF0000}'Red'{/color} object"
     window hide
     # launch the game and play
     $ res = StartGame()

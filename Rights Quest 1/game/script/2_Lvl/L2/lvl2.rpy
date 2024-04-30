@@ -96,10 +96,10 @@ label L2:
                 user "That's absurd!! Everyone deserves to be treated equally!"
                 pass
             "Watch and Stay Silent":
-                jump discrimination
                 show sischar at left with moveinleft
-                sis "We can't let this go!"
-                hide sis with dissolve
+                sis "We can't let this go!! Remember what grandma said to us??"
+                hide sischar with dissolve
+                jump discrimination
                 jump d3
 
     show brochar at left with moveinleft
@@ -166,7 +166,8 @@ label L2:
     "As they share their stories and eat, the Mrs.Gray thanks the children yet again for their courage and go their own separate ways"
     "The children arrive at the \"Lost & Found\""
 
-    show brochar with moveinright 
+    show brochar with moveinright
+    bro "Here we are! Hello there, we're here to find a present that was lost and found by a young kind woman."
 
     #granny finds the gift beforehand and keeps it at loft and found, kids find the present from it
 

@@ -8,7 +8,7 @@ label mini3:
     with dissolve
 
     user "Let's find the present!"
-
+    window hide
     # launch the game and play
     $ res = StartGame()
 
