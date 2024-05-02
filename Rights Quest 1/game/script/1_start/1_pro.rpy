@@ -65,7 +65,6 @@ label pro1:
     show sischar main at right with moveinright
     sis "Yes Granny lets begin!!"
     
-    #hide all
     scene black with fade
     show grannychar at left with dissolve:
         alpha 0.5 #transparency
@@ -80,7 +79,7 @@ label pro1:
     bro "Let's not be too late and get back"
 
     show sischar at left with moveinleft
-    sis "Hey, I spot with my eyes something red"
+    sis "Hey, I spot with my eyes something {color=#FF0000}Red{/color}"
 
     bro "Where?"
 

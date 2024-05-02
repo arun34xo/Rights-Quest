@@ -31,6 +31,10 @@ label splashscreen:
 #movie bg fn
 image snowy_field = Movie(size=(1920, 1080), channel="movie", play="images/snowy_field.ogv")
 
+#snow--fall
+image snow1 = Fixed(SnowBlossom("gui/snow1.png", 50, xspeed=(20, 50), yspeed=(100, 200), start=50))
+image snow2 = Fixed(SnowBlossom("gui/snow2.png", 50, xspeed=(20, 50), yspeed=(100, 200), start=50))
+
 
 #blur fn
 image devchar = At('dev', sprite_highlight('dev'))
@@ -67,8 +71,8 @@ define mrsgray = Character("Gray", image='mrsgraychar',callback=name_callback, c
 
 
 label start:
-
-    jump foundhiddenitem
+    
+    jump pro1
 
     scene bg dev
     show devchar with moveinright

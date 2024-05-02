@@ -76,7 +76,6 @@ style frame:
     background Frame("gui/frame.png", gui.frame_borders, tile=gui.frame_tile)
 
 
-
 ################################################################################
 ## In-game screens
 ################################################################################
@@ -287,6 +286,9 @@ style quick_button_text:
 ## to other menus, and to start the game.
 
 screen navigation():
+
+    add Snow("gui/snow1.png")
+    add Snow("gui/snow2.png")
 
      #to separate in game menu from main menu
     if renpy.get_screen("main_menu"):

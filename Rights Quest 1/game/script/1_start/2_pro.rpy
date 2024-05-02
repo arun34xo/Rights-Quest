@@ -81,8 +81,8 @@ label pro2:
     label d2:
         pass
 
-    "What would you like to do?"
     menu:
+        "What would you like to do?"
         "Accept the request":
             user "Of course, we don't mind helping at all"
             santa "Such a kind child, Very well!"
