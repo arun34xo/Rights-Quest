@@ -1,22 +1,76 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script/4_games/mini3/mini3.rpy", line 30, in script
-    jump lvl2
-ScriptError: could not find label 'lvl2'.
+  File "game/script/1_start/2_pro.rpy", line 122, in script
+    scene bg_santa_workshop with dissolve
+Exception: Could not find font 'font/ArchitectsDaughter.tff'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script/4_games/mini3/mini3.rpy", line 30, in script
-    jump lvl2
-  File "D:\Game Development\renpy-8.2.1-sdk\renpy\ast.py", line 1698, in execute
-    rv = renpy.game.script.lookup(target)
-  File "D:\Game Development\renpy-8.2.1-sdk\renpy\script.py", line 1103, in lookup
-    raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'lvl2'.
+  File "game/script/1_start/2_pro.rpy", line 122, in script
+    scene bg_santa_workshop with dissolve
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\ast.py", line 1363, in execute
+    renpy.exports.with_statement(trans, paired=paired)
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\exports.py", line 1781, in with_statement
+    return renpy.game.interface.do_with(trans, paired, clear=clear)
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\core.py", line 1548, in do_with
+    return self.interact(trans_pause=True,
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\core.py", line 2165, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\core.py", line 2818, in interact_core
+    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\core.py", line 1352, in draw_screen
+    surftree = renpy.display.render.render_screen(
+  File "render.pyx", line 486, in renpy.display.render.render_screen
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\transition.py", line 384, in render
+    top = render(self.new_widget, width, height, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\screen.py", line 754, in render
+    child = renpy.display.render.render(self.child, w, h, st, at)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\layout.py", line 900, in render
+    surf = render(child, width, height, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\layout.py", line 1076, in render
+    surf = render(d, rw, height - y, cst, cat)
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\behavior.py", line 968, in render
+    rv = super(Button, self).render(width, height, st, at)
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\display\layout.py", line 1361, in render
+    surf = render(child,
+  File "render.pyx", line 170, in renpy.display.render.render
+  File "render.pyx", line 260, in renpy.display.render.render
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\text\text.py", line 2276, in render
+    virtual_layout = Layout(self, width, height, renders, drawable_res=False, size_only=True)
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\text\text.py", line 676, in __init__
+    glyphs = ts.glyphs(s, self)
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\text\text.py", line 268, in glyphs
+    fo = font.get_font(self.font, self.size, self.bold, self.italic, 0, self.antialias, self.vertical, self.hinting, layout.oversample, self.shaper, self.instance, self.axis)
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\text\font.py", line 745, in get_font
+    face = load_face(fn, shaper)
+  File "C:\Users\chris\Downloads\renpy-8.2.1-sdk\renpy\text\font.py", line 673, in load_face
+    raise Exception("Could not find font {0!r}.".format(orig_fn))
+Exception: Could not find font 'font/ArchitectsDaughter.tff'.
 
 Windows-10-10.0.22631 AMD64
 Ren'Py 8.2.1.24030407
 Rights Quest 1 1.0
-Sat Apr 27 09:05:38 2024
+Wed May  1 00:14:05 2024
