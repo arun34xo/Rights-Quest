@@ -1,3 +1,7 @@
+default firstlock = 0.0
+default secondlock = 0.0
+default thirdlock = 0.0
+
 label L2:
     #The Right against discrimination.
     if L2complete==True:
@@ -6,6 +10,8 @@ label L2:
         pass
 
     scene bg_town with fade
+    show snow1
+    show snow2
     "The kids approach the town and find their way to a complex of restaurants."
 
     show brochar at right with moveinright
@@ -166,6 +172,10 @@ label L2:
     "As they share their stories and eat, the Mrs.Gray thanks the children yet again for their courage and go their own separate ways"
     "The children arrive at the \"Lost & Found\""
 
+    label test:
+        pass
+
+    scene bg_LostnFound
     show brochar with moveinright
     bro "Here we are! Hello there, we're here to find a present that was lost and found by a young kind woman."
 

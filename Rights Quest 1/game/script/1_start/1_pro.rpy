@@ -70,11 +70,15 @@ label pro1:
         alpha 0.5 #transparency
     gran "Once upon a time, there lived 3 young children."
     
-    scene bg_forestwkid with dissolve #with 3kids
+    scene bg_forestwkid with dissolve 
+    show snow1
+    show snow2
     gran "Although they were young, they were mature at heart"
     gran "On a snowy day, as Christmas draws near the children ventured to a nearby forest to gather firewood and play in the snow"
 
-    scene bg_forest1 with fade #w hint in bg
+    scene bg_forest1 with fade
+    show snow1
+    show snow2
     show brochar at right with moveinright
     bro "Let's not be too late and get back"
 
@@ -83,7 +87,7 @@ label pro1:
 
     bro "Where?"
 
-    jump mini1
+    jump hidden1
 
     label redbag:
         pass

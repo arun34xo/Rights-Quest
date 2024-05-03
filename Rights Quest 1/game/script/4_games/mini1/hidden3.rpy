@@ -1,15 +1,13 @@
-#done
-
-label mini2:
-    scene bg_santa_workshop
+label hidden3:
+    scene inside_shed
     # fill the game screen with objects
-    $ InitGame("bg_santa_workshop", 1.0, (825, 660), "figure1")
+    $ InitGame("bg_inside_shed", 1.0, (825, 720), "present1")
 
     # show the game screen as a simple background
     $ GameAsBG()
     with dissolve
 
-    user "Let's help find the Map"
+    user "Let's find the present!"
     window hide
     # launch the game and play
     $ res = StartGame()
@@ -22,9 +20,9 @@ label mini2:
     if oRes:
         scene black with dissolve:
             pause(1.0)
-        scene bg_santa_workshop with dissolve
-        user "I wonder if this is the map Mr. Santa is looking for..."
-        jump foundhiddenitem
+        scene bg_inside_shed with dissolve
+        user "Look at that! We found Santa's first missing present!"
+        jump foundhiddenitem1
     else:
-        "{i}Hint : On the box near the tree{/i}"
-        jump mini2
+        "{i}Hint : On of the shelves below the lantern.{/i}"
+        jump hidden3

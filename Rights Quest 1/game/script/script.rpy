@@ -34,6 +34,11 @@ image snowy_field = Movie(size=(1920, 1080), channel="movie", play="images/snowy
 #snow--fall
 image snow1 = Fixed(SnowBlossom("gui/snow1.png", 50, xspeed=(20, 50), yspeed=(100, 200), start=50))
 image snow2 = Fixed(SnowBlossom("gui/snow2.png", 50, xspeed=(20, 50), yspeed=(100, 200), start=50))
+image heavysnow1 = Fixed(SnowBlossom("gui/snow1.png", 2000, xspeed=(400, 1000), yspeed=(6000, 8000), start=2000))
+image heavysnow2 = Fixed(SnowBlossom("gui/snow1.png", 3000, xspeed=(600, 800), yspeed=(3000, 4000), start=3000))
+image heavysnow3 = Fixed(SnowBlossom("gui/snow1.png", 3000, xspeed=(500, 900), yspeed=(3000, 4000), start=3000))
+
+
 
 
 #blur fn
@@ -72,7 +77,7 @@ define mrsgray = Character("Gray", image='mrsgraychar',callback=name_callback, c
 
 label start:
     
-    jump pro1
+    jump test
 
     scene bg dev
     show devchar with moveinright

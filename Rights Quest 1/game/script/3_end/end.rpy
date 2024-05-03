@@ -59,6 +59,7 @@ label end:
         show brochar at left with moveinleft
         bro "And right before Christmas time, was a close call"
         santa "Wonderful, would you children like to deliver the presents with me?"
+        hide brochar with dissolve
 
         show sischar at left with moveinleft
         sis "Yess!! It would be an honour"

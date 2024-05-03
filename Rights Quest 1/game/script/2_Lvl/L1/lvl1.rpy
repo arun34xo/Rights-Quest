@@ -5,6 +5,10 @@ label L1:
     else: 
         pass
     scene bg_snow_field with fade
+    show heavysnow1
+    show heavysnow2
+    show heavysnow3
+
     "The kids walk downtown looking for Santa's missing presents. Ominous dark clouds roll in."
 
     show sischar at right with moveinright
@@ -114,7 +118,7 @@ label L1:
     show sischar at right with moveinright
     sis "Oh my goodness, look! Is that Santa's present?!"
 
-    jump mini3
+    jump hidden3
     
     label foundhiddenitem1:
         pass

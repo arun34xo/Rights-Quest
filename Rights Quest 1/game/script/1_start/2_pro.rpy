@@ -3,6 +3,8 @@ default nothingcount = 0
 label pro2:
 
     scene bg_santa_field with fade
+    show snow1
+    show snow2
     "As they go to the address on the tag, they reach a field filled with Reindeers and in the middle, a house with smoke coming out of the chimney is spotted"
 
     show brochar at right with moveinright
@@ -12,6 +14,8 @@ label pro2:
     sis "It must be, it's magical."
 
     scene bg_santahouse with fade
+    show snow1
+    show snow2
     show brochar at right with moveinright
     bro "Shall we knock?"
 
@@ -114,7 +118,7 @@ label pro2:
     show santachar at right with moveinright
     santa "I thank you again young ones, I've got a map with the locations of the presents I lost."
     santa "I kept it somewhere here... Where did I keep it now? Hmmm..."
-    jump mini2
+    jump hidden2
 
     label foundhiddenitem:
         pass

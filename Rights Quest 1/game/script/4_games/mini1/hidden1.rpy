@@ -1,7 +1,9 @@
 #incomplete
 
-label mini1:
+label hidden1:
     scene bg_forest
+    show snow1
+    show snow2
     # fill the game screen with objects
     $ InitGame("bg_forest", 1.0, (1500, 926), "figure")
 
@@ -23,8 +25,10 @@ label mini1:
         scene black with dissolve:
             pause(1.0)
         scene bg_forest with dissolve
+        show snow1
+        show snow2
         user "Hmm, it is unusual for a bag to be out here..."
         jump redbag
     else:
         "{i}Hint : Look on the right side by the trees{/i}"
-        jump mini1
+        jump hidden1
