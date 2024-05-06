@@ -53,17 +53,17 @@ label L2:
 
     menu:
         "I'd like to eat ..."
-        "Ramen":
+        "Ramen Noodles":
             user "I’d like a bowl of Ramen!"
             show storeownerchar at right with moveinright
             storeowner "A Chicken Noodles, Chow mein and a Ramen coming right up!!"
             pass
-        "Chicken noodles":
+        "Chicken Noodles":
             user "I'd like a bowl of Chicken noodles!"
             show storeownerchar at right with moveinright
             storeowner "2 Chicken Noodles and a Chow mein coming right up!!"
             pass
-        "Chow mein noodles":
+        "Chow Mein Noodles":
             user "I'd like a bowl of Chow mein noodles"
             show storeownerchar at right with moveinright
             storeowner "2 Chow mein and Chicken Noodle coming right up!!"
@@ -170,16 +170,85 @@ label L2:
 
     scene black with dissolve
     "As they share their stories and eat, the Mrs.Gray thanks the children yet again for their courage and go their own separate ways"
-    "The children arrive at the \"Lost & Found\""
+    "The Children follow the directions given by Mrs.Gray and reach the \"Lost & Found\""
+
+    scene lost_found with fade
+    show brochar at right with moveinright
+    bro "Hmmm, I think this is the place,"
+    show sischar at left with moveinleft
+    sis "It says 'Lost & Found' at the top, let's go inside!"
+    hide brochar
+    hide sischar
+
+    "The children go inside to find a man sitting at the front desk."
+
+    scene lost_found_inside
+    show mrwickchar at right with moveinright
+    mrwick "Hello there children, welcome to the Lost and Found! My name is Mr.Wick, how may I be at your service?"
+    show sischar at left with moveinleft
+    sis "Hello Mister, we were told by a woman that she had given our missing item here!"
+    hide sischar
+    mrwick "Ooh, jolly! What is the missing items that you are seeking?"
+    show brochar at left with moveinleft
+    bro "We are helping Santa find his missing presents. Have you by any chance happen to see a present box?"
+    hide brochar
+    mrwick "Yes, indeed! I have kept it safe in my locker, waiting for its rightful owner!"
+    show sischar at left with moveinleft
+    sis "Yay! You have it! Can we see it please!"
+    hide sischar
+    mrwick "Very well, children. I shall go inside and look."
+    hide mrwickchar
+    "Mr.Wick goes inside to retrieve th present."
+    "Moments later, Mr.Wick return to the kids with an empty hand."
+    show mrwickchar at right with moveinright
+    mrwick "I'm very sorry to bother you children, but I'm not being able to find the key to my locker. Would you kids be willing to help me? "
+    hide mrwickchar
+
+    label d5:
+    menu:
+        "Help Mr.Wick find the key.":
+            user "We would be happy to help Mr.Wick!"
+            show sischar at right with moveinright
+            sis "Yes we would!"
+            show brochar at left with moveinleft
+            bro "Let's get to work guys!"
+            pass
+        "Go back home":
+            user "I want to go back home."
+            show brochar at left with moveinleft
+            bro "We can't leave without Santa's presents. We can't let Christmas go to ruins!"
+            show sischar at right with moveinright
+            sis "You got that right, bro!"
+            jump d5
+        "Do nothing":
+            user "I don't feel like doing anything."
+            show sischar at right with moveinright
+            sis "We have to get back to Santa as soon as we can!"
+            show brochar at left with moveinleft
+            bro "Come on! We need to find the next present and return them to Santa. Christmas is in our hands!"
+            jump d5
+
+    hide brochar
+    hide sischar
+
+    show mrwickchar
+    mrwick "Let's go children!"
+    hide mrwickchar
+
+    "Mr.Wick takes the children inside his safety locker room."
+
+    scene safe_room with fade
+    show mrwickchar
+    mrwick "Alright Children, we're looking for a silver key that unlocks my locker."
+    hide mrwickchar
+
+    jump hidden4
+    
+    label foundhiddenitem2:
+        pass
 
     label test:
         pass
-
-    scene bg_LostnFound
-    show brochar with moveinright
-    bro "Here we are! Hello there, we're here to find a present that was lost and found by a young kind woman."
-
-    #granny finds the gift beforehand and keeps it at loft and found, kids find the present from it
 
     $ L2complete = True
     $ c = c+1

@@ -2,13 +2,11 @@
 errors listed below, and try again.
 
 
-File "game/script/2_Lvl/L1/lvl1.rpy", line 129: expected statement.
-    L1complete=True
-              ^
+The label foundhiddenitem1 is defined twice, at File "game/script/2_Lvl/L1/lvl1.rpy", line 123:
+    label foundhiddenitem1:
+and File "game/script/2_Lvl/L2/lvl2.rpy", line 247:
+    label foundhiddenitem1:
 
-File "game/script/2_Lvl/L1/lvl1.rpy", line 130: expected statement.
-    c = c+1
-      ^
 
 Ren'Py Version: Ren'Py 8.2.1.24030407
-Sat Apr 27 09:30:09 2024
+Mon May  6 13:48:34 2024

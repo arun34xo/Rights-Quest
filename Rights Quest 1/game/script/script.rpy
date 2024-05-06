@@ -63,6 +63,8 @@ image bullychar = At('bully', sprite_highlight('bully'))
 
 image storeownerchar = At('storeowner', sprite_highlight('storeowner'))
 
+image mrwickchar = At('mrwick', sprite_highlight('mrwick'))
+
 #char intro
 define dev = Character("Dev",image='devchar',callback=name_callback, cb_name='dev')
 define gran = Character("Granny",image='granchar',callback=name_callback, cb_name='granny')
@@ -73,6 +75,7 @@ define santa = Character("Santa",image='santachar',callback=name_callback, cb_na
 define bully = Character("Bully", image='bullychar',callback=name_callback, cb_name='bully')
 define storeowner = Character("Store Owner", image='storeownerchar',callback=name_callback, cb_name='storeowner')
 define mrsgray = Character("Gray", image='mrsgraychar',callback=name_callback, cb_name='mrsgray')
+define mrwick = Character("Wick", image = 'mrwickchar', callback=name_callback, cb_name='mrwick')
 
 
 label start:
