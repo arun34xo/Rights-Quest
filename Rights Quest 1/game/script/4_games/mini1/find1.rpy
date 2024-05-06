@@ -1,13 +1,13 @@
-label hidden4:
-    scene inside_shed
+label find1:
+    scene inside_locker
     # fill the game screen with objects
-    $ InitGame("safe_room", 1.0, (230, 770), "key1")
+    $ InitGame("inside_locker", 1.0, (935, 490), "present2")
 
     # show the game screen as a simple background
     $ GameAsBG()
     with dissolve
 
-    user "Let's find the key!"
+    user "Let's find the missing present!"
     window hide
     # launch the game and play
     $ res = StartGame()
@@ -21,8 +21,8 @@ label hidden4:
         scene black with dissolve:
             pause(1.0)
         scene safe_room with dissolve
-        user "We found the key!"
-        jump foundhiddenitem2
+        user "We found it!"
+        jump foundhiddenitem3
     else:
-        "{i}Hint : On the stool next to the desk.{/i}"
-        jump hidden4
+        "{i}Hint : Check on one of the racks.{/i}"
+        jump find1

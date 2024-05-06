@@ -4,7 +4,7 @@ default L1complete=False
 default L2complete=False
 default L3complete=False
 default recentcomplete=False
-default firsttime=True
+default firsttime=False
 default c=0
 
 label completedD:
@@ -28,6 +28,7 @@ label pro3:
         show snow2  
         show brochar at right with moveinright
         bro "What's the next plan of action"
+        
         label d4:
             pass
         menu:

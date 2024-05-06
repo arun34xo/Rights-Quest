@@ -39,8 +39,6 @@ image heavysnow2 = Fixed(SnowBlossom("gui/snow1.png", 3000, xspeed=(600, 800), y
 image heavysnow3 = Fixed(SnowBlossom("gui/snow1.png", 3000, xspeed=(500, 900), yspeed=(3000, 4000), start=3000))
 
 
-
-
 #blur fn
 image devchar = At('dev', sprite_highlight('dev'))
 image grannychar = At('granny', sprite_highlight('granny'))
@@ -74,8 +72,8 @@ define user = Character("Me",image='userchar',callback=name_callback, cb_name='m
 define santa = Character("Santa",image='santachar',callback=name_callback, cb_name='santa')
 define bully = Character("Bully", image='bullychar',callback=name_callback, cb_name='bully')
 define storeowner = Character("Store Owner", image='storeownerchar',callback=name_callback, cb_name='storeowner')
-define mrsgray = Character("Gray", image='mrsgraychar',callback=name_callback, cb_name='mrsgray')
-define mrwick = Character("Wick", image = 'mrwickchar', callback=name_callback, cb_name='mrwick')
+define mrsgray = Character("Mrs.Gray", image='mrsgraychar',callback=name_callback, cb_name='mrsgray')
+define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callback, cb_name='mrwick')
 
 
 label start:

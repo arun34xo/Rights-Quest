@@ -99,7 +99,7 @@ label L2:
         menu:
             user "..."
             "Speak up against discrimination":
-                user "That's absurd!! Everyone deserves to be treated equally!"
+                user "That's absurd! Everyone deserves to be treated equally!"
                 pass
             "Watch and Stay Silent":
                 show sischar at left with moveinleft
@@ -231,14 +231,14 @@ label L2:
     hide brochar
     hide sischar
 
-    show mrwickchar
+    show mrwickchar with moveinright
     mrwick "Let's go children!"
     hide mrwickchar
 
     "Mr.Wick takes the children inside his safety locker room."
 
     scene safe_room with fade
-    show mrwickchar
+    show mrwickchar with moveinright
     mrwick "Alright Children, we're looking for a silver key that unlocks my locker."
     hide mrwickchar
 
@@ -247,6 +247,50 @@ label L2:
     label foundhiddenitem2:
         pass
 
+    show mrwickchar with moveinright
+    mrwick "Well done, Children! Now we shall retrieve your present!"
+    hide mrwickchar
+    
+    "Mr.Wick goes to check in the safe."
+
+    show mrwickchar with moveinright
+    mrwick "Alright, Children. Check in here if you can find the present you were searching for."
+    hide mrwickchar
+
+    "They all go inside to see the safety locker."
+
+    jump find1
+
+    label foundhiddenitem3:
+        pass
+
+    show mrwickchar with moveinright
+    mrwick "Good job on finding the missing present children!"
+    hide mrwickchar
+    show sischar at left with moveinleft
+    sis "Yay! We finally found the missing present!"
+    show brochar at right with moveinright
+    bro "Ahh! I can't wait to give it back to Santa!"
+    hide brochar
+    hide sischar
+
+    label d6:
+    menu:
+        "Thank Mr.Wick":
+            user "Thank you for all your help Mister!"
+            show sischar at right with moveinright
+            sis "We couldn't have done it without you Mr.Wick!"
+            show brochar at left with moveinleft
+            bro "We hope to see you soon again!"
+            pass
+        "Say nothing":
+            show brochar at left with moveinleft
+            bro "We should thank Mr.Wick for all his help!"
+            jump d6
+    hide brochar
+    hide sischar
+    scene black with dissolve
+    "The Children go about on their journey to find the last present."
     label test:
         pass
 

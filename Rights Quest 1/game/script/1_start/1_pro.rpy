@@ -1,4 +1,4 @@
-default debug_gameplay_only = False #easier to jump btw files
+default debug_gameplay_only = True #easier to jump btw files
 
 label pro1:
     scene black with dissolve

@@ -74,23 +74,28 @@ label L1:
     sis "Leave us alone! We’re not bothering anyone."
     bully "Oh, but you are bothering us. This is our territory, and we don’t like outsiders."
     
-    menu:
-        "Stand up for ourselves.":
-            hide bullychar
-            hide sischar
-            user "We won’t let you intimidate us! Stand your ground!"
-            show brochar at left with moveinleft
-            bro "We have the right to protect ourselves and others from harm. And we won’t let you hurt us!"
-            show bullychar at right with moveinright
-            bully "Fine, have it your way. But this isn’t over!"
-        "Reason with them.":
-            hide bullychar
-            hide sischar
-            user "Let’s try to reason with them, we don’t want any trouble."
-            show sischar at left with moveinleft
-            sis "We don't mean to be here, as soon as the storm gets better, we'll leave."
-            show bullychar at right with moveinright
-            bully "Hmph, fine. But stay out of our way."
+    label d7:
+        scene bg_inside_shed with dissolve
+        menu:
+            "Stand up for ourselves.":
+                hide bullychar
+                hide sischar
+                user "We won’t let you intimidate us! Stand your ground!"
+                show brochar at left with moveinleft
+                bro "We have the right to protect ourselves and others from harm. And we won’t let you hurt us!"
+                show bullychar at right with moveinright
+                bully "Fine, have it your way. But this isn’t over!"
+            "Reason with them.":
+                hide bullychar
+                hide sischar
+                user "Let’s try to reason with them, we don’t want any trouble."
+                show sischar at left with moveinleft
+                sis "We don't mean to be here, as soon as the storm gets better, we'll leave."
+                show bullychar at right with moveinright
+                bully "Hmph, fine. But stay out of our way."
+            "Stay silent.":
+                jump protection
+                jump d7
             
     hide brochar
     hide sischar
