@@ -180,8 +180,8 @@ screen input(prompt):
         vbox:
             xanchor gui.dialogue_text_xalign
             xpos gui.dialogue_xpos
-            xsize gui.dialogue_width
-            ypos gui.dialogue_ypos
+            yalign 1.0
+            yoffset -50
 
             text prompt style "input_prompt"
             input id "input"
