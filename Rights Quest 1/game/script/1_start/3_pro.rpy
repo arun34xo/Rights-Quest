@@ -4,7 +4,7 @@ default L1complete=False
 default L2complete=False
 default L3complete=False
 default recentcomplete=False
-default firsttime=True
+default firsttime=False
 default c=0
 
 label completedD:
@@ -24,8 +24,11 @@ label completedD:
 label pro3:
     if child==True:
         scene black with dissolve
+        show snow1
+        show snow2  
         show brochar at right with moveinright
         bro "What's the next plan of action"
+        
         label d4:
             pass
         menu:
@@ -60,6 +63,9 @@ label pro3:
             "To Mr. Santa's home":
                 jump end
     else:
+        scene black with dissolve
+        show snow1
+        show snow2
         show screen gameUI
         if firsttime==False:
             scene black with dissolve #forest2

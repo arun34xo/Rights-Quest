@@ -1,13 +1,13 @@
-label mini3:
-    scene inside_shed
+label find1:
+    scene inside_locker
     # fill the game screen with objects
-    $ InitGame("bg_inside_shed", 1.0, (825, 720), "present1")
+    $ InitGame("inside_locker", 1.0, (935, 490), "present2")
 
     # show the game screen as a simple background
     $ GameAsBG()
     with dissolve
 
-    user "Let's find the present!"
+    user "Let's find the missing present!"
     window hide
     # launch the game and play
     $ res = StartGame()
@@ -20,9 +20,9 @@ label mini3:
     if oRes:
         scene black with dissolve:
             pause(1.0)
-        scene inside_shed with dissolve
-        user "Look at that! We found Santa's first missing present!"
-        jump foundhiddenitem1
+        scene safe_room with dissolve
+        user "We found it!"
+        jump foundhiddenitem3
     else:
-        "{i}Hint : On of the shelves below the lantern.{/i}"
-        jump mini3
+        "{i}Hint : Check on one of the racks.{/i}"
+        jump find1

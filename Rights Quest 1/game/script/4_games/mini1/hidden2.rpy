@@ -1,6 +1,6 @@
 #done
 
-label mini2:
+label hidden2:
     scene bg_santa_workshop
     # fill the game screen with objects
     $ InitGame("bg_santa_workshop", 1.0, (825, 660), "figure1")
@@ -27,4 +27,4 @@ label mini2:
         jump foundhiddenitem
     else:
         "{i}Hint : On the box near the tree{/i}"
-        jump mini2
+        jump hidden2

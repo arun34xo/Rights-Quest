@@ -1,15 +1,13 @@
-#incomplete
-
-label mini1:
-    scene bg_forest
+label hidden3:
+    scene inside_shed
     # fill the game screen with objects
-    $ InitGame("bg_forest", 1.0, (1500, 926), "figure")
+    $ InitGame("bg_inside_shed", 1.0, (825, 720), "present1")
 
     # show the game screen as a simple background
     $ GameAsBG()
     with dissolve
 
-    user "Lets find a {color=#FF0000}'Red'{/color} object"
+    user "Let's find the present!"
     window hide
     # launch the game and play
     $ res = StartGame()
@@ -22,9 +20,9 @@ label mini1:
     if oRes:
         scene black with dissolve:
             pause(1.0)
-        scene bg_forest with dissolve
-        user "Hmm, it is unusual for a bag to be out here..."
-        jump redbag
+        scene bg_inside_shed with dissolve
+        user "Look at that! We found Santa's first missing present!"
+        jump foundhiddenitem1
     else:
-        "{i}Hint : Look on the right side by the trees{/i}"
-        jump mini1
+        "{i}Hint : On of the shelves below the lantern.{/i}"
+        jump hidden3

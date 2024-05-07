@@ -34,6 +34,9 @@ image snowy_field = Movie(size=(1920, 1080), channel="movie", play="images/snowy
 #snow--fall
 image snow1 = Fixed(SnowBlossom("gui/snow1.png", 50, xspeed=(20, 50), yspeed=(100, 200), start=50))
 image snow2 = Fixed(SnowBlossom("gui/snow2.png", 50, xspeed=(20, 50), yspeed=(100, 200), start=50))
+image heavysnow1 = Fixed(SnowBlossom("gui/snow1.png", 2000, xspeed=(400, 1000), yspeed=(6000, 8000), start=2000))
+image heavysnow2 = Fixed(SnowBlossom("gui/snow1.png", 3000, xspeed=(600, 800), yspeed=(3000, 4000), start=3000))
+image heavysnow3 = Fixed(SnowBlossom("gui/snow1.png", 3000, xspeed=(500, 900), yspeed=(3000, 4000), start=3000))
 
 
 #blur fn
@@ -58,6 +61,8 @@ image bullychar = At('bully', sprite_highlight('bully'))
 
 image storeownerchar = At('storeowner', sprite_highlight('storeowner'))
 
+image mrwickchar = At('mrwick', sprite_highlight('mrwick'))
+
 #char intro
 define dev = Character("Dev",image='devchar',callback=name_callback, cb_name='dev')
 define gran = Character("Granny",image='granchar',callback=name_callback, cb_name='granny')
@@ -67,12 +72,13 @@ define user = Character("Me",image='userchar',callback=name_callback, cb_name='m
 define santa = Character("Santa",image='santachar',callback=name_callback, cb_name='santa')
 define bully = Character("Bully", image='bullychar',callback=name_callback, cb_name='bully')
 define storeowner = Character("Store Owner", image='storeownerchar',callback=name_callback, cb_name='storeowner')
-define mrsgray = Character("Gray", image='mrsgraychar',callback=name_callback, cb_name='mrsgray')
+define mrsgray = Character("Mrs.Gray", image='mrsgraychar',callback=name_callback, cb_name='mrsgray')
+define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callback, cb_name='mrwick')
 
 
 label start:
     
-    jump pro1
+    jump test
 
     scene bg dev
     show devchar with moveinright
