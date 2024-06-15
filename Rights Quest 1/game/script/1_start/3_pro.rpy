@@ -3,8 +3,11 @@ default completed=False
 default L1complete=False
 default L2complete=False
 default L3complete=False
+default L1again=False
+default L2again=False
+default L3again=False
 default recentcomplete=False
-default firsttime=False
+default firsttime=True
 default c=0
 
 label completedD:
@@ -33,33 +36,48 @@ label pro3:
             pass
         menu:
             "Let's go ..."
-            "Find the 1st present":
+            "Find the 1st present" if L1again==False:
                 if L1complete == True:
                     show sischar at left with moveinleft
                     sis "We found that present, let's search else where"
+                    $L1again=True
                     jump d4
                 else:
                     show sischar at left with moveinleft
                     sis "Very well, let's be on our way then!!"
                     jump L1
-            "Find the 2nd present":
+            
+            "{s}Find the 1st present{\s}" if L1again==True:
+                jump d4
+
+            "Find the 2nd present" if L2again==False:
                 if L2complete == True:
                     show sischar at left with moveinleft
                     sis "We found that present, let's search else where"
+                    $L2again=True
                     jump d4
                 else:
                     show sischar at left with moveinleft
                     sis "Onwards we go!!"
                     jump L2
-            "Find the 3rd present":
+            
+            "{s}Find the 2nd present{\s}" if L2again==True:
+                jump d4
+
+            "Find the 3rd present" if L3again==False:
                 if L3complete == True:
                     show sischar at left with moveinleft
                     sis "We found that present, let's search else where"
+                    $L3again=True
                     jump d4
                 else:
                     show sischar at left with moveinleft
                     sis "Let's go, it's freezing out here!!"
                     jump L3
+
+            "{s}Find the 3rd present{\s}" if L3again==True:
+                jump d4
+
             "To Mr. Santa's home":
                 jump end
     else:
@@ -76,4 +94,5 @@ label pro3:
             scene black with dissolve #helps user be familiar with the map
             show brochar at right with moveinright
             bro "Pressing the Map Button accesses the Map, Convinent right!!"
+            $firsttime=True
             $ renpy.pause(100, hard=True)

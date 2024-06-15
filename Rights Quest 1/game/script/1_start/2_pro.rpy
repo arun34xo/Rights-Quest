@@ -1,5 +1,6 @@
 default shouted = False
-default nothingcount = 0
+default AskedForReward = False
+
 label pro2:
 
     scene bg_santa_field with fade
@@ -25,18 +26,17 @@ label pro2:
             hide brochar
             hide sischar
             with dissolve
-            show santachar at right with moveinright:
-                alpha 0.2
+            show santachar_shadow at right with moveinright
             santa "Who is it at this time of the day?"
             pass
         "Scream":
             user "IS ANYONE IN THERE??"
+            show sischar at left with moveinleft
             sis "Nooo... Why are you shouting?"
             hide brochar
             hide sischar
             with dissolve
-            show santachar at right with moveinright:
-                alpha 0.3
+            show santachar_shadow at right with moveinright
             santa "Who is so rude enough to disturb a man and his reindeers like this?"
             $ shouted = True
             pass
@@ -47,8 +47,7 @@ label pro2:
             hide brochar
             hide sischar
             with dissolve
-            show santachar at right with moveinright:
-                alpha 0.1
+            show santachar_shadow at right with moveinright
             santa "Who is it at this time of the day?"
             pass        
 
@@ -61,7 +60,7 @@ label pro2:
 
     "As the door opens, a large figure steps out with a pleasant smile"
 
-    hide santachar with dissolve
+    hide santachar_shadow with dissolve
     show santachar at right with moveinright
     sis "Oh my god it's Santa!!"
     santa "Oh my!! What a merry surprise. I was puzzled on what I should do ever since I lost the bag."
@@ -92,9 +91,13 @@ label pro2:
             santa "Such a kind child, Very well!"
             pass
 
-        "Ask for the reward":
+        "Ask for the reward" if AskedForReward==False:
             user "Do we get a reward?"
             santa "Such an eager child. Yes, I've prepared a series of challenges for you to overcome. The reward shall remain a surprise."
+            $AskedForReward=True
+            jump d2
+        
+        "{s}Ask for the reward{/s}" if AskedForReward==True:
             jump d2
 
         "Stay silent":

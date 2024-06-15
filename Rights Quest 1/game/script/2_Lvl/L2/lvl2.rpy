@@ -1,6 +1,6 @@
-default firstlock = 0.0
-default secondlock = 0.0
-default thirdlock = 0.0
+default GoHome = False
+default DoingNothing = False
+default SayNothing = False
 
 label L2:
     #The Right against discrimination.
@@ -52,7 +52,7 @@ label L2:
     with dissolve
 
     menu:
-        "I'd like to eat ..."
+        user "I'd like to eat ..."
         "Ramen Noodles":
             user "I’d like a bowl of Ramen!"
             show storeownerchar at right with moveinright
@@ -81,7 +81,7 @@ label L2:
     with dissolve
 
     show mrsgraychar at left with moveinleft
-    mrsgray "Hello there, I’d like to order a Ramen"
+    mrsgray "Hello there, I’d like to order"
 
     show storeownerchar at right with moveinright
     storeowner "Sorry, We don’t serve your kind of people."   
@@ -92,7 +92,7 @@ label L2:
     bro "Excuse me? What do you mean by \"your kind of people\" ?"
 
     show mrsgraychar at left with moveinleft
-    mrsgray "I believe I am being discriminated due to the color of my skin..."
+    mrsgray "I believe I am being discriminated due to the color of my skin... It's happened in others stores as well"
 
     label d3:
         scene bg_restaurant with dissolve
@@ -102,11 +102,16 @@ label L2:
                 user "That's absurd! Everyone deserves to be treated equally!"
                 pass
             "Watch and Stay Silent":
-                show sischar at left with moveinleft
-                sis "We can't let this go!! Remember what grandma said to us??"
-                hide sischar with dissolve
+                show mrsgraychar at left with moveinleft
+                mrsgray "But I have not eaten in a while..."
+                show storeownerchar at right with moveinright
+                storeowner "No buts and bits, please show yourself out the store..."
+                mrsgray "......"
+                mrsgray "Understood, I shall take my leave..."
+                hide mrsgraychar with moveoutleft
+                storeowner "Hmph, please wait while I get your food dear customers!"
+                #game fail
                 jump discrimination
-                jump d3
 
     show brochar at left with moveinleft
     bro "Yeah, you can't just refuse to serve someone just because of thier skin color"
@@ -213,19 +218,29 @@ label L2:
             show brochar at left with moveinleft
             bro "Let's get to work guys!"
             pass
-        "Go back home":
+
+        "Go back home" if GoHome==False:
             user "I want to go back home."
             show brochar at left with moveinleft
             bro "We can't leave without Santa's presents. We can't let Christmas go to ruins!"
             show sischar at right with moveinright
             sis "You got that right, bro!"
+            $GoHome=True
             jump d5
-        "Do nothing":
+        
+        "{s}Go back home{\s}" if GoHome==True:
+            jump d5
+
+        "Do nothing" if DoingNothing==False:
             user "I don't feel like doing anything."
             show sischar at right with moveinright
             sis "We have to get back to Santa as soon as we can!"
             show brochar at left with moveinleft
             bro "Come on! We need to find the next present and return them to Santa. Christmas is in our hands!"
+            $DoingNothing=True
+            jump d5
+
+        "{s}Do nothing{\s}" if DoingNothing==True:
             jump d5
 
     hide brochar
@@ -283,16 +298,22 @@ label L2:
             show brochar at left with moveinleft
             bro "We hope to see you soon again!"
             pass
-        "Say nothing":
+
+        "Say nothing" if SayNothing==False:
             show brochar at left with moveinleft
             bro "We should thank Mr.Wick for all his help!"
+            show sischar at right with moveinright
+            sis "That's right, it's only right to thank someone after they help us. Go on!!"
+            $SayNothing=True
             jump d6
+        
+        "{s}Say nothing{\s}" if SayNothing==True:
+            jump d6
+
     hide brochar
     hide sischar
     scene black with dissolve
     "The Children go about on their journey to find the last present."
-    label test:
-        pass
 
     $ L2complete = True
     $ c = c+1

@@ -94,9 +94,14 @@ label L1:
                 show bullychar at right with moveinright
                 bully "Hmph, fine. But stay out of our way."
             "Stay silent.":
+                show bullychar at right with moveinright
+                bully "Such weaklings, no one will know if you get hurt today"
+                show sischar at left with moveinleft
+                sis "No... please dont hurt us..."
+                bully "Too late miss!!"
+                #game failed screen
                 jump protection
-                jump d7
-            
+                            
     hide brochar
     hide sischar
     hide bullychar

@@ -52,12 +52,12 @@ image brochar = At('bro', sprite_highlight('keith'))
 image userchar = At('no_char', sprite_highlight('me'))
 
 image santachar = At('santa', sprite_highlight('santa'))
+image santachar_shadow = At('santa_shadow', sprite_highlight('santa'))
+
 
 image bullychar = At('bully', sprite_highlight('bully'))
 
 image mrsgraychar = At('mrsgray', sprite_highlight('mrsgray'))
-
-image bullychar = At('bully', sprite_highlight('bully'))
 
 image storeownerchar = At('storeowner', sprite_highlight('storeowner'))
 
@@ -77,15 +77,14 @@ define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callbac
 
 
 label start:
-    
-    jump test
+        
+    jump pro3
 
     scene bg dev
     show devchar with moveinright
     dev "Oh, Hey there. Welcome to Rights Quest"
     dev "Before we begin, mind answering some question?"
     show devchar at right with move
-    
     menu:
         dev "User's gender is :"
 

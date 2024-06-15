@@ -154,7 +154,15 @@ init:
     $ advtrans1 = ImageDissolve("wipes/038.jpg", 1.0, 8)
 
 #######################################################################################################################################
-#pointer new
+#pointer cursor
+
+init:
+    $ config.mouse = {
+        'default' : [ ( "gui/cursor/cursor_idle.png", 0, 0) ],
+        'pressed_default' : [ ( "gui/cursor/cursor_click.png", 0, 0) ],
+        "button" : [ ( "gui/cursor/cursor_idle.png", 0, 0) ],
+        'pressed_button' : [ ( "gui/cursor/cursor_click.png", 0, 0) ],
+    }
 
 
 #######################################################################################################################################
@@ -255,3 +263,7 @@ init python:
                 return None
                 
             return int(self.xpos), int(self.ypos), st, self.image
+
+
+##################################################################################################################################################
+#

@@ -1,5 +1,8 @@
 default debug_gameplay_only = True #easier to jump btw files
 
+default NoReturnBag = False
+
+
 label pro1:
     scene black with dissolve
     "As the summer vacation starts a band of 3 friend's go and visit their friend's grandma who lived by the ocean"
@@ -105,8 +108,11 @@ label pro1:
             user "Let's... "
             "Let's return it":
                 pass
-            "Do nothing...":
+            "Do nothing..." if NoReturnBag==False:
                 sis "Let's return it to the owner, the person who lost it may be worried..."
+                $NoReturnBag=True
+                jump d1
+            "{s}Do nothing...{/s}" if NoReturnBag==True:
                 jump d1
 
     jump pro2
