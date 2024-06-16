@@ -78,7 +78,7 @@ define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callbac
 
 label start:
         
-    jump pro3
+    #jump pro3
 
     scene bg dev
     show devchar with moveinright

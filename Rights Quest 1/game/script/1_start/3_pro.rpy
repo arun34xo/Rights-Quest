@@ -26,7 +26,7 @@ label completedD:
 
 label pro3:
     if child==True:
-        scene black with dissolve
+        scene bg_santa_field with dissolve
         show snow1
         show snow2  
         show brochar at right with moveinright
@@ -86,12 +86,12 @@ label pro3:
         show snow2
         show screen gameUI
         if firsttime==False:
-            scene black with dissolve #forest2
+            scene bg_santa_field with dissolve #forest2
             show sischar at left with moveinleft
             sis "Let's get this over with and go warm ourselves... I'm freezing out here"
             $ renpy.pause(100, hard=True)
         else:
-            scene black with dissolve #helps user be familiar with the map
+            scene bg_santa_field with dissolve #helps user be familiar with the map
             show brochar at right with moveinright
             bro "Pressing the Map Button accesses the Map, Convinent right!!"
             $firsttime=True

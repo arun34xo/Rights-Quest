@@ -210,38 +210,38 @@ label L2:
     hide mrwickchar
 
     label d5:
-    menu:
-        "Help Mr.Wick find the key.":
-            user "We would be happy to help Mr.Wick!"
-            show sischar at right with moveinright
-            sis "Yes we would!"
-            show brochar at left with moveinleft
-            bro "Let's get to work guys!"
-            pass
+        menu:
+            "Help Mr.Wick find the key.":
+                user "We would be happy to help Mr.Wick!"
+                show sischar at right with moveinright
+                sis "Yes we would!"
+                show brochar at left with moveinleft
+                bro "Let's get to work guys!"
+                pass
 
-        "Go back home" if GoHome==False:
-            user "I want to go back home."
-            show brochar at left with moveinleft
-            bro "We can't leave without Santa's presents. We can't let Christmas go to ruins!"
-            show sischar at right with moveinright
-            sis "You got that right, bro!"
-            $GoHome=True
-            jump d5
-        
-        "{s}Go back home{\s}" if GoHome==True:
-            jump d5
+            "Go back home" if GoHome==False:
+                user "I want to go back home."
+                show brochar at left with moveinleft
+                bro "We can't leave without Santa's presents. We can't let Christmas go to ruins!"
+                show sischar at right with moveinright
+                sis "You got that right, bro!"
+                $GoHome=True
+                jump d5
+            
+            "{s}Go back home{\s}" if GoHome==True:
+                jump d5
 
-        "Do nothing" if DoingNothing==False:
-            user "I don't feel like doing anything."
-            show sischar at right with moveinright
-            sis "We have to get back to Santa as soon as we can!"
-            show brochar at left with moveinleft
-            bro "Come on! We need to find the next present and return them to Santa. Christmas is in our hands!"
-            $DoingNothing=True
-            jump d5
+            "Do nothing" if DoingNothing==False:
+                user "I don't feel like doing anything."
+                show sischar at right with moveinright
+                sis "We have to get back to Santa as soon as we can!"
+                show brochar at left with moveinleft
+                bro "Come on! We need to find the next present and return them to Santa. Christmas is in our hands!"
+                $DoingNothing=True
+                jump d5
 
-        "{s}Do nothing{\s}" if DoingNothing==True:
-            jump d5
+            "{s}Do nothing{\s}" if DoingNothing==True:
+                jump d5
 
     hide brochar
     hide sischar
@@ -290,25 +290,25 @@ label L2:
     hide sischar
 
     label d6:
-    menu:
-        "Thank Mr.Wick":
-            user "Thank you for all your help Mister!"
-            show sischar at right with moveinright
-            sis "We couldn't have done it without you Mr.Wick!"
-            show brochar at left with moveinleft
-            bro "We hope to see you soon again!"
-            pass
+        menu:
+            "Thank Mr.Wick":
+                user "Thank you for all your help Mister!"
+                show sischar at right with moveinright
+                sis "We couldn't have done it without you Mr.Wick!"
+                show brochar at left with moveinleft
+                bro "We hope to see you soon again!"
+                pass
 
-        "Say nothing" if SayNothing==False:
-            show brochar at left with moveinleft
-            bro "We should thank Mr.Wick for all his help!"
-            show sischar at right with moveinright
-            sis "That's right, it's only right to thank someone after they help us. Go on!!"
-            $SayNothing=True
-            jump d6
-        
-        "{s}Say nothing{\s}" if SayNothing==True:
-            jump d6
+            "Say nothing" if SayNothing==False:
+                show brochar at left with moveinleft
+                bro "We should thank Mr.Wick for all his help!"
+                show sischar at right with moveinright
+                sis "That's right, it's only right to thank someone after they help us. Go on!!"
+                $SayNothing=True
+                jump d6
+            
+            "{s}Say nothing{\s}" if SayNothing==True:
+                jump d6
 
     hide brochar
     hide sischar

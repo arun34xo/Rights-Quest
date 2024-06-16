@@ -1,3 +1,6 @@
+default OptReasoned = False
+default OptStoodup = False
+
 label L1:
     #The Right to Protection granted the strength to shield oneself and others from harm
     if L1complete==True:
@@ -85,6 +88,7 @@ label L1:
                 bro "We have the right to protect ourselves and others from harm. And we won’t let you hurt us!"
                 show bullychar at right with moveinright
                 bully "Fine, have it your way. But this isn’t over!"
+                $OptStoodup = True
             "Reason with them.":
                 hide bullychar
                 hide sischar
@@ -93,6 +97,7 @@ label L1:
                 sis "We don't mean to be here, as soon as the storm gets better, we'll leave."
                 show bullychar at right with moveinright
                 bully "Hmph, fine. But stay out of our way."
+                $OptReasoned = True
             "Stay silent.":
                 show bullychar at right with moveinright
                 bully "Such weaklings, no one will know if you get hurt today"

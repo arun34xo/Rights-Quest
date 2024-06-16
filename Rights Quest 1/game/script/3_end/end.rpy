@@ -65,7 +65,136 @@ label end:
         sis "Yess!! It would be an honour"
         user "Can we??"
         santa "Ofcourse, It's the least I can do for the children that helped me."
+        hide sischar
+        hide santachar with dissolve
 
-        #end stuff - incomplete
+        #$ renpy.movie_cutscene("SantaTakeoff.webm")
+
+        scene bg_sky with fade
+        show santachar at right with moveinright
+        santa "So tell me about the adventure you went through for the 1st present..."
+        user "It was stormy in our way for the 1st present..."
+        menu:
+            "I was scared and my brother gave me the strength to move forward":
+                santa "A family that supports each other, impressive haha. And then?"
+                user "We made our way to a shelter"
+            "I was the bravest among us and led us to shelter nearby":
+                show brochar at left with moveinleft
+                bro "Hahaha, sure you were you little liar"
+                santa "Hoho, seems like I missed out on some fun time"
+        show sischar at left with moveinleft
+        sis "We encountered a few bullies they gave us quite a hard time"
+        hide sischar with dissolve
+        show brochar at left with moveinleft
+        if OptReasoned:
+            bro "Our young one gathered the courage and Reasoned with them"
+            bro "They understood and went their way without causing trouble"
+        elif OptStoodup:
+            bro "Our young one gathered the courage and Stood Up against them"
+            bro "They got scared and ran with their tails between their legs, hahaha"
+        santa "Ahh, it was a good decision to overcome that problem"
+        hide brochar with dissolve
+        show sischar at left with moveinleft
+        sis "You'll never guess, we found the first present at the house we seeked refuge in."
+        santa "Oh my, seems like luck was on your side. As expected of the children that found my bag hoho"
+        hide santachar
+        hide sischar
+        with dissolve
+
+        #$ renpy.movie_cutscene("SantaTakeoff.webm")
+
+        show santachar at right with moveinright
+        santa "Now tell me about the adventure of the second gift"
+        show brochar at left with moveinleft
+        bro "As we were hungry, we went into a restaurant to order lunch"
+        hide brochar with dissolve
+        show sischar at left with moveinleft
+        sis "I must admit, the food was fantastic but I cannot say the same for the shop owner"
+        santa "Hoho, it seems like you had bone to pick with the shop owner"
+        sis "Well it's cause..."
+        menu:
+            "He was kind to us but not to others":
+                user "I suspect he only liked people based on their skin tone"
+                santa "Ho? Why do you say so?"
+            "His food had something weird in it":
+                user "Apparently it would only be edible to people of specific skin tone"
+                santa "Hahaha, I see the store owner was selective of his customers..."
+        user "There was a kind women who came in to order lunch like us"
+        sis "But the store owner refused to serve her due to her dark skin tone"
+        hide sischar with dissolve
+        show brochar at left with moveinleft
+        bro "Our Little one stood up once again against discrimination"
+        menu:
+            "Stop... you'll make me blush":
+                user "I only did what was right, nothing more!"
+            "Hehe... praise me more":
+                user "I felt it was the right thing to do, so I just did it"
+        santa "Hoho, young man..."
+        if shouted:
+            santa "To think the younglin that shouted in the front door was such a brave man, hoho"
+        elif knocked:
+            santa "To think the young man who knocked on my door was this brave, impressive hoho"
+        else:
+            santa "To think the boy who was scared to knock my door was a brave one, hoho nice one"
+        bro "That's our young brother for you, we're proud of you!!"
+        hide brochar with dissolve
+        show sischar at left with moveinleft
+        sis "We ate with the kind lady, and you wouldn't guess it..."
+        sis "She apparently came across the present and gave it to \"Lost and Found\""
+        santa "Hoho, the light of luck must shine brightly upon you lots"
+        santa "Such an interesting tale and actions you have taken"
+        label d8:
+            scene bg_sky with fade
+            show santachar at right with moveinright
+            menu:
+                santa "What is it you learned from the 1st trial?"
+                "Stand up to bullies":
+                    user "They only bully us cause we do nothing when they supress us"
+                "Reason with bullies":
+                    user "They maybe kind enough to understand us"
+                "You must bully others":
+                    user "Those with power must dominate Those that are weak"
+                    santa "Not quite the answer I was looking for.... I am dissapointed"
+                    jump protection
+                "Do nothing if you are bullied":
+                    user "Do nothing and just suffer is the way"
+                    santa "Not quite the answer I was looking for.... I am dissapointed"
+                    jump protection
+        show sischar at left with moveinleft
+        sis "It was quite an interesting and meaningful adventure"
+        hide sischar with dissolve
+        show brochar at left with moveinleft
+        bro "Haha, it was. I wouldnt want to go through that again"
+        label d9:
+            scene bg_sky with fade
+            show santachar at right with moveinright
+            santa "Well well, what about the 2nd trail?"
+            menu:
+                santa "What did you learn from that?"
+                "Discriminate against minority":
+                    user "The minority is a minority for a reason"
+                    santa "Not quite the answer I was looking for.... I am dissapointed"
+                    jump discrimination
+                "Discriminate against the weak and different":
+                    user "The strong and perfect exist to dominate"
+                    santa "Not quite the answer I was looking for.... I am dissapointed"
+                    jump discrimination
+                "Do not Discriminate":
+                    user "It is never the right choice to discriminate"
+                    user "No matter the circumstance or person"
+                    santa "Impressively learnt young one"
+        show brochar at left with moveinleft
+        bro "Thats right, we should even stand up against discrimination"
+        santa "That's right, you children will grow up well"
+        santa "Now that the night is drawing to a close, shall I drop you home?"
+        bro "Its been a long day and I could use some great sleep"
+        hide brochar with dissolve
+        show sischar at left with moveinleft
+        sis "I cant wait to tell granny about what happened today!!"
+        santa "Hohoho, off we go!!"
+
+        #$ renpy.movie_cutscene("SantaTakeoff.webm")
+
+        #end credits
         
     return

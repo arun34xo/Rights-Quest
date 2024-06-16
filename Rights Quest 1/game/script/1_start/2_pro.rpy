@@ -1,4 +1,5 @@
 default shouted = False
+default knocked = False
 default AskedForReward = False
 
 label pro2:
@@ -28,6 +29,7 @@ label pro2:
             with dissolve
             show santachar_shadow at right with moveinright
             santa "Who is it at this time of the day?"
+            $ knocked = True
             pass
         "Scream":
             user "IS ANYONE IN THERE??"
@@ -61,7 +63,7 @@ label pro2:
     "As the door opens, a large figure steps out with a pleasant smile"
 
     hide santachar_shadow with dissolve
-    show santachar at right with moveinright
+    show santachar at right with dissolve
     sis "Oh my god it's Santa!!"
     santa "Oh my!! What a merry surprise. I was puzzled on what I should do ever since I lost the bag."
     santa "Come in children, welcome to my humble abode."
