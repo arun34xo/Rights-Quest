@@ -3,6 +3,7 @@ default DoingNothing = False
 default SayNothing = False
 
 label L2:
+    play music "main-menu-music.mp3"
     #The Right against discrimination.
     if L2complete==True:
         jump completedD

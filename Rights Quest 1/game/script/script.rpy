@@ -7,6 +7,7 @@ default gender = "none"
 default p1 = "none"
 default p2 = "none"
 default p3 = "none"
+default sib = "none"
 default child = True
 
 
@@ -41,6 +42,7 @@ image heavysnow3 = Fixed(SnowBlossom("gui/snow1.png", 3000, xspeed=(500, 900), y
 
 #blur fn
 image devchar = At('dev', sprite_highlight('dev'))
+
 image grannychar = At('granny', sprite_highlight('granny'))
 
 image sischar main= At('sis main', sprite_highlight('eileen'))
@@ -65,6 +67,7 @@ image mrwickchar = At('mrwick', sprite_highlight('mrwick'))
 
 #char intro
 define dev = Character("Dev",image='devchar',callback=name_callback, cb_name='dev')
+define Granny = Character('Granny')
 define gran = Character("Granny",image='granchar',callback=name_callback, cb_name='granny')
 define sis = Character("Eileen",image='sischar',callback=name_callback, cb_name='eileen')
 define bro = Character("Keith",image='brocahr',callback=name_callback, cb_name='keith')
@@ -78,7 +81,7 @@ define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callbac
 
 label start:
         
-    #jump pro3
+    jump end
 
     scene bg dev
     show devchar with moveinright
@@ -89,22 +92,25 @@ label start:
         dev "User's gender is :"
 
         "Male":
-            $gender = "male" #setting gender
+            $gender = "boy" #setting gender
             $p1 = "he" #setting pronoun
             $p2 = "him"
             $p3 = "his"
+            $sib = "brother"
 
         "Female":
-            $gender = "female"
+            $gender = "girl"
             $p1 = "she"
             $p2 = "her"
             $p3 = "her"
+            $sib = "sister"
 
         "Prefer Not To Say":
             $gender = "none"
             $p1 = "they"
             $p2 = "them"
             $p3 = "them"
+            $sib = "thing"
 
     menu:
         dev "User's age is :"

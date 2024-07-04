@@ -1,4 +1,5 @@
 label hidden3:
+    play music "Game.mp3"
     scene inside_shed
     # fill the game screen with objects
     $ InitGame("bg_inside_shed", 1.0, (825, 720), "present1")
@@ -22,6 +23,7 @@ label hidden3:
             pause(1.0)
         scene bg_inside_shed with dissolve
         user "Look at that! We found Santa's first missing present!"
+        play music "main-menu-music.mp3"
         jump foundhiddenitem1
     else:
         "{i}Hint : On of the shelves below the lantern.{/i}"

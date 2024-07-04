@@ -1,4 +1,5 @@
 label find1:
+    play music "Game.mp3"
     scene inside_locker
     # fill the game screen with objects
     $ InitGame("inside_locker", 1.0, (935, 490), "present2")
@@ -22,6 +23,7 @@ label find1:
             pause(1.0)
         scene safe_room with dissolve
         user "We found it!"
+        play music "main-menu-music.mp3"
         jump foundhiddenitem3
     else:
         "{i}Hint : Check on one of the racks.{/i}"

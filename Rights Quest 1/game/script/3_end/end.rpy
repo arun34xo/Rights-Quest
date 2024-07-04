@@ -1,5 +1,5 @@
 label end:
-
+    play music "main-menu-music.mp3"
     scene bg_santa_workshop with fade
     show brochar at left with moveinleft
     bro "Hello Mr. Santa, we're back!!"
@@ -87,24 +87,18 @@ label end:
         hide sischar with dissolve
         show brochar at left with moveinleft
         if OptReasoned:
-            bro "Our young one gathered the courage and Reasoned with them"
+            bro "Our young [sib] gathered the courage and Reasoned with them"
             bro "They understood and went their way without causing trouble"
         elif OptStoodup:
-            bro "Our young one gathered the courage and Stood Up against them"
+            bro "Our young [sib] gathered the courage and Stood Up against them"
             bro "They got scared and ran with their tails between their legs, hahaha"
         santa "Ahh, it was a good decision to overcome that problem"
         hide brochar with dissolve
         show sischar at left with moveinleft
         sis "You'll never guess, we found the first present at the house we seeked refuge in."
         santa "Oh my, seems like luck was on your side. As expected of the children that found my bag hoho"
-        hide santachar
-        hide sischar
-        with dissolve
-
-        #$ renpy.movie_cutscene("SantaTakeoff.webm")
-
-        show santachar at right with moveinright
         santa "Now tell me about the adventure of the second gift"
+        hide sischar with dissolve
         show brochar at left with moveinleft
         bro "As we were hungry, we went into a restaurant to order lunch"
         hide brochar with dissolve
@@ -129,14 +123,14 @@ label end:
                 user "I only did what was right, nothing more!"
             "Hehe... praise me more":
                 user "I felt it was the right thing to do, so I just did it"
-        santa "Hoho, young man..."
+        santa "Hoho, young [gender]..."
         if shouted:
             santa "To think the younglin that shouted in the front door was such a brave man, hoho"
         elif knocked:
-            santa "To think the young man who knocked on my door was this brave, impressive hoho"
+            santa "To think the young [gender] who knocked on my door was this brave, impressive hoho"
         else:
             santa "To think the boy who was scared to knock my door was a brave one, hoho nice one"
-        bro "That's our young brother for you, we're proud of you!!"
+        bro "That's our young [sib] for you, we're proud of you!!"
         hide brochar with dissolve
         show sischar at left with moveinleft
         sis "We ate with the kind lady, and you wouldn't guess it..."

@@ -25,6 +25,7 @@ label completedD:
 
 
 label pro3:
+    play music "map.mp3"
     if child==True:
         scene bg_santa_field with dissolve
         show snow1
@@ -80,6 +81,7 @@ label pro3:
 
             "To Mr. Santa's home":
                 jump end
+                
     else:
         scene black with dissolve
         show snow1

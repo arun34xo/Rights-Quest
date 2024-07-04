@@ -1,4 +1,5 @@
 label hidden4:
+    play music "Game.mp3"
     scene inside_shed
     # fill the game screen with objects
     $ InitGame("safe_room", 1.0, (230, 770), "key1")
@@ -22,6 +23,7 @@ label hidden4:
             pause(1.0)
         scene safe_room with dissolve
         user "We found the key!"
+        play music "main-menu-music.mp3"
         jump foundhiddenitem2
     else:
         "{i}Hint : On the stool next to the desk.{/i}"

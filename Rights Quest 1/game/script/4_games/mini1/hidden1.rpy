@@ -1,6 +1,7 @@
 #incomplete
 
 label hidden1:
+    play music "Game.mp3"
     scene bg_forest
     show snow1
     show snow2
@@ -28,6 +29,7 @@ label hidden1:
         show snow1
         show snow2
         user "Hmm, it is unusual for a bag to be out here..."
+        play music "main-menu-music.mp3"
         jump redbag
     else:
         "{i}Hint : Look on the right side by the trees{/i}"

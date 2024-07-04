@@ -1,4 +1,5 @@
 label L3:
+    play music "main-menu-music.mp3"
     #The Right to Survival gave the power of healing and nourishment
     if L3complete==True:
         jump completedD

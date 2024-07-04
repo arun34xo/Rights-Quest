@@ -2,6 +2,7 @@ default OptReasoned = False
 default OptStoodup = False
 
 label L1:
+    play music "main-menu-music.mp3"
     #The Right to Protection granted the strength to shield oneself and others from harm
     if L1complete==True:
         jump completedD
