@@ -68,6 +68,7 @@ label end:
         hide sischar
         hide santachar with dissolve
 
+        scene black with dissolve
         #$ renpy.movie_cutscene("SantaTakeoff.webm")
 
         scene bg_sky with fade
@@ -187,6 +188,7 @@ label end:
         sis "I cant wait to tell granny about what happened today!!"
         santa "Hohoho, off we go!!"
 
+        scene black with dissolve
         #$ renpy.movie_cutscene("SantaTakeoff.webm")
 
         #end credits
