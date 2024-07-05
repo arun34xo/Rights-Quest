@@ -9,7 +9,7 @@ label discrimination:
         "That did not end well, the food doesn't taste great after what happened."
         scene black with fade
     play music "Lesson.mp3"
-    scene bg_living with dissolve
+    scene bg_living with advtrans4
     show granny at right with moveinright
     play sound "audio/voice/lesson_2/lesson_2_line1.ogg"
     Granny "That's not really the right thing to do, Whats important is that one must stand against discrimination, be it you who is the target or another person."
@@ -19,6 +19,7 @@ label discrimination:
     Granny "Especially if it is something they can not control"
     stop sound
     hide granny with dissolve
+    scene black with advtrans4
     play music "main-menu-music.mp3"
     if L2complete:
         jump d9

@@ -98,3 +98,4 @@ label pro3:
             bro "Pressing the Map Button accesses the Map, Convinent right!!"
             $firsttime=True
             $ renpy.pause(100, hard=True)
+            

@@ -2,7 +2,7 @@
 
 label hidden1:
     play music "Game.mp3"
-    scene bg_forest
+    scene bg_forest 
     show snow1
     show snow2
     # fill the game screen with objects
@@ -10,7 +10,7 @@ label hidden1:
 
     # show the game screen as a simple background
     $ GameAsBG()
-    with dissolve
+    with advtrans5
 
     user "Lets find a {color=#FF0000}'Red'{/color} object"
     window hide
@@ -23,7 +23,7 @@ label hidden1:
 
     # check the game results and play them in the scenario    
     if oRes:
-        scene black with dissolve:
+        scene black with advtrans5:
             pause(1.0)
         scene bg_forest with dissolve
         show snow1

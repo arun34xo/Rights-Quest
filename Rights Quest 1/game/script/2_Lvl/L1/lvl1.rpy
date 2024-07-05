@@ -8,7 +8,8 @@ label L1:
         jump completedD
     else: 
         pass
-    scene bg_snow_field with fade
+    scene black with advtrans3
+    scene bg_snow_field with advtrans3
     show heavysnow1
     show heavysnow2
     show heavysnow3

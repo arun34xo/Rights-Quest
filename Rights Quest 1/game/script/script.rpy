@@ -80,10 +80,9 @@ define mrwick = Character("Mr.Wick", image = 'mrwickchar', callback=name_callbac
 
 
 label start:
-        
-    jump end
 
-    scene bg dev
+    #jump pro3
+    scene bg_dev with advtrans1
     show devchar with moveinright
     dev "Oh, Hey there. Welcome to Rights Quest"
     dev "Before we begin, mind answering some question?"

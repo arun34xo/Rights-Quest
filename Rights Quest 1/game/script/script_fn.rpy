@@ -146,12 +146,18 @@ screen MapUI:
             idle "map/L3_idle.png"
             hover "map/L3_hover.png"
         action Jump("L3")
+        action hide map
 
 #######################################################################################################################################
 #advanced transition
 
 init:
-    $ advtrans1 = ImageDissolve("wipes/038.jpg", 1.0, 8)
+    $ advtrans1 = ImageDissolve("images/transition/038.jpg", 1.0, 8) #dev interaction
+    $ advtrans3 = ImageDissolve("images/transition/19.jpg", 1.0, 8) #lvl start
+    $ advtrans4 = ImageDissolve("images/transition/12.jpg", 1.0, 8) #lesson start n end
+    $ advtrans5 = ImageDissolve("images/transition/20.jpg", 1.0, 8) #after before game
+    $ advtranssnake = ImageDissolve("images/transition/snake2.png", 1.0, 8) 
+    $ advtransbite = ImageDissolve("images/transition/bites.jpg", 1.0, 8) #snacks break
 
 #######################################################################################################################################
 #pointer cursor

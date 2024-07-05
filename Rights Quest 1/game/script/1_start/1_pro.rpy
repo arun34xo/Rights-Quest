@@ -4,9 +4,9 @@ default NoReturnBag = False
 
 
 label pro1:
-    scene black with dissolve
+    scene black with advtrans1
     "As the summer vacation starts a band of 3 friend's go and visit their friend's grandma who lived by the ocean"
-    scene bg_house with fade
+    scene bg_house with dissolve
     "The grandma always captured the heart of the children with the unique stories that would secretly hold moral values that would be needed by the children"
 
     scene black with dissolve
@@ -33,7 +33,7 @@ label pro1:
     bro "Really? Whats your name then?"
 
     #hide all
-    scene black with fade
+    scene black with dissolve
 
     label name_set:
         $ name = renpy.input("My name is...", default="Luke")
@@ -68,12 +68,12 @@ label pro1:
     show sischar main at right with moveinright
     sis "Yes Granny lets begin!!"
     
-    scene black with fade
+    scene black with dissolve
     show grannychar at left with dissolve:
         alpha 0.5 #transparency
     gran "Once upon a time, there lived 3 young children."
     
-    scene bg_forestwkid with dissolve 
+    scene bg_forestwkid with dissolve
     show snow1
     show snow2
     gran "Although they were young, they were mature at heart"

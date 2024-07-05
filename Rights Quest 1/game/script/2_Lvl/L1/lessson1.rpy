@@ -9,7 +9,7 @@ label protection:
         "That did not end well, people have boo boos now"
         scene black with fade
     play music "Lesson.mp3"
-    scene bg_living with dissolve
+    scene bg_living with advtrans4
     show granny at right with moveinright
     play sound "audio/voice/lesson_1/lesson_1_line1.ogg"
     Granny "Remeber, you children have the Right to Protection. Which means that adults or anyone capable must help you in cases where you are in trouble"
@@ -19,6 +19,7 @@ label protection:
     Granny "Thus, in order to protect ones-self they must also learn to ask for help when required."
     stop sound
     hide granny with dissolve
+    scene black with advtrans4
     play music "main-menu-music.mp3"
     if L1complete:
         jump d8

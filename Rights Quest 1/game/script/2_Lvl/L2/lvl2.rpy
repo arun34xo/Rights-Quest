@@ -9,8 +9,8 @@ label L2:
         jump completedD
     else: 
         pass
-
-    scene bg_town with fade
+    scene black with advtrans3
+    scene bg_town with advtrans3
     show snow1
     show snow2
     "The kids approach the town and find their way to a complex of restaurants."

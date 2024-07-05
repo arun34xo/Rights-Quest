@@ -27,11 +27,11 @@ label end:
                 hide santachar
                 hide sischar
                 with dissolve
-                scene black with dissolve
+                scene black with advtransbite
                 "Time passes as the 4 sit down and have a hot cup of chocolate and marshmallow"
                 pause(1.3)
                 
-                scene bg_santa_workshop with dissolve
+                scene bg_santa_workshop with advtransbite
                 show brochar at left with moveinleft
                 bro "Thank you for the hospitality, shall we get back on the search?"
                 hide brochar with dissolve
