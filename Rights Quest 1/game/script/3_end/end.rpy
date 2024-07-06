@@ -69,7 +69,7 @@ label end:
         hide santachar with dissolve
 
         scene black with dissolve
-        #$ renpy.movie_cutscene("SantaTakeoff.webm")
+        $ renpy.movie_cutscene("images/santa.webm")
 
         scene bg_sky with fade
         show santachar at right with moveinright
@@ -189,7 +189,7 @@ label end:
         santa "Hohoho, off we go!!"
 
         scene black with dissolve
-        #$ renpy.movie_cutscene("SantaTakeoff.webm")
+        $ renpy.movie_cutscene("images/end.webm")
 
         #end credits
         
